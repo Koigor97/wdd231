@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(3, 1fr) 300px;
+  grid-template-areas:
+    "head head head head"
+    "nav nav nav nav"
+    "main main main r-side"
+    "footer footer footer footer";
+  grid-template-rows: 1fr 90px 5fr 1fr;
+}
+
+header {
+  background: lightpink;
+  padding: 2rem;
+  grid-area: head;
+}
+
+nav {
+  background: lightblue;
+  grid-area: nav;
+}
+
+main {
+  background: coral;
+  grid-area: main;
+}
+
+.right-sidebar {
+  background: yellow;
+  grid-area: r-side;
+}
+
+footer {
+  background: wheat;
+  padding: 2rem;
+  text-align: center;
+  grid-area: footer;
+}
+
+nav,
+.right-sidebar {
+  padding: 1rem;
+}
