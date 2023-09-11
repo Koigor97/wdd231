@@ -30,9 +30,10 @@
   }
 
   main {
-    height: 70vh;
+    height: 80rem;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 80px 2fr;
+    margin-block: 7rem;
 
     & h2 {
       text-align: left;
