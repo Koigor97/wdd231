@@ -115,6 +115,13 @@ main {
   & ul {
     text-indent: 2rem;
     margin-block: 1rem;
+
+    & a:link,
+    & a:visited {
+      color: var(--header-bg);
+      display: inline-block;
+      margin-inline-end: 1.5px;
+    }
   }
 
   & section {
