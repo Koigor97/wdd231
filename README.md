@@ -25,3 +25,5 @@ This is a block course, meaning, it's 14 weeks semester course, crunched to a 7 
 Week-01 is about refreshing our Web Dev knowledge since we have been on break for quite a while. So, we are cobwebbing the tech fatigue and imposter syndrome (at least for me 😃) with learning activities that include basic grid layout refactoring the **Holy Grail** layout, and some media-query. Also, we had to dust up our JavaScript knowledge with a codepen exercise.
 
 ![week1 activities](images/week.webp)
+
+This is followed by building a repository portal page for quick access that link to all learning activities, assignments, and project development timeline.
