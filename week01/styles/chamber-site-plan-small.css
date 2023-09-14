@@ -220,6 +220,10 @@ section:not(.client-style-guide, .client-typography){
     background-color: var(--default-color);
 }
 
+.client-typography :nth-child(3) {
+  font-family: var(--paragraph-font);
+}
+
 .colored {
   background-color: var(--primary-color);
   color: var(--default-color);
