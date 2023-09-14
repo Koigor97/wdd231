@@ -12,6 +12,10 @@
   <meta name="author" content="Samuel Turay">
   <meta name="description"
     content="Site-Plan for Lynnwood Chamber of Commerce. It gives the layout and structure of the Chamber of commerce website. Highlight color scheme, fonts used and wireframe. Purpose of the website, audience and the problem it solves.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@400;700&family=Poppins&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="styles/chamber-site-plan-small.css">
   <link rel="stylesheet" href="styles/chamber-site-plan-large.css">
 </head>
@@ -57,18 +61,18 @@
       <div class="key-purpose-box">
         <h3>Intended Solutions:</h3>
 
-        <ul>
-          <li><strong>Home Page: </strong>The hompage serves as the primary gateway to the website. It provides a
+        <ul class="pages">
+          <li><strong>Home Page:</strong>The hompage serves as the primary gateway to the website. It provides a
             welcoming introduction to the organizatiion, conveying its mission and values.Clear navigation allows for
             easy access to other sections of the website. It offers latest news and updates, weather information, etc.
           </li>
-          <li><strong>Discover Page: </strong>is the hub for showcasing the community. It purpose is to highlight
+          <li><strong>Discover Page:</strong>is the hub for showcasing the community. It purpose is to highlight
             attractions, landmarks, history, local businesses, culture and demographic.</li>
           <li><strong>Directory Page: </strong>serves a comprehensive resource for finding and connecting with the
             chamber member businesses. It aims to promote the businesses of members, foster networking and facilitate
             partnership btoh in the community and nation wide.
           </li>
-          <li><strong>Join Page: </strong>is dedicated to encouraging new memberships and informing potential members
+          <li><strong>Join Page:</strong>is dedicated to encouraging new memberships and informing potential members
             about the benefits of joining Lynnwood Chamber of Commerce. There are three membership level options of
             non-profit, silver, and gold. The different levels have different perks including directory listings,
             publications, trainings, social media work, luncheons, sponsorships, advertising, etc.</li>
@@ -76,23 +80,29 @@
       </div>
       <div>
         <h3 class="target-audience">Scenarios</h3>
-        <ul>
-          <li><strong>Business Owner - Sarah:</strong> Sarah is a local business owner who moved to the area quite recently and is interested in networking opportunities. Sarah's question: <em>"What events will the chamber be holding this month that promote business-to-business networking?"</em></li>
-          <li><strong>Community Advocate - John:</strong> John is a community advocate and is curious about the chamber's leadership and decision-making process. John's question: <em>"Where can I find contact information for the chamber's board of directors?"</em></li>
-          <li><strong>Prospective Resident - Emily:</strong> Emily is considering moving to the area and wants to know more about the community's growth and development. Emily's question: <em>"What has been the population growth in the area?"</em></li>
+        <ul class="audience">
+          <li><strong>Business Owner - Sarah:</strong>Sarah is a local business owner who moved to the area quite
+            recently and is interested in networking opportunities. Sarah's question: <em>"What events will the chamber
+              be holding this month that promote business-to-business networking?"</em></li>
+          <li><strong>Community Advocate - John:</strong>John is a community advocate and is curious about the
+            chamber's leadership and decision-making process. John's question: <em>"Where can I find contact information
+              for the chamber's board of directors?"</em></li>
+          <li><strong>Prospective Resident - Emily:</strong>Emily is considering moving to the area and wants to know
+            more about the community's growth and development. Emily's question: <em>"What has been the population
+              growth in the area?"</em></li>
         </ul>
       </div>
     </section>
 
     <section class="client-logo">
       <h2>Website Logo</h2>
-      <img src="images/1Corner-logo.webp" alt="1Corner Restaurant logo" />
+      <img src="" alt="website logo" />
     </section>
 
     <section class="client-style-guide">
 
       <h2>Style Guide</h2>
-      <p>Color Palette URL: <a href="https://omatsuri.app/color-shades-generator" target="_blank">Omatsuri App</a>
+      <p>Color Palette URL: <a href="https://coolors.co/00113e-152246-212d4d-ffbe37-f3c462-edcd8a-edeefd-c5c8f4-a5a9e8-eef0f4" target="_blank">Coolors</a>
       </p>
 
       <table class="colors">
@@ -104,22 +114,22 @@
         </tr>
 
         <tr>
-          <td class="primary">#800020</td>
-          <td class="secondary">#FFF0E0</td>
-          <td class="tertiary">#13325B;</td>
-          <td class="default">#ffffff</td>
+          <td class="primary">#00113e</td>
+          <td class="secondary">#ffbe37</td>
+          <td class="tertiary">#edeefd</td>
+          <td class="default">#eef0f4</td>
         </tr>
         <tr>
-          <td class="primary-shade-1">#912A44</td>
-          <td class="secondary-shade-1">#F9D9B6</td>
-          <td class="tertiary-shade-1">#2B4568</td>
-          <td class="default-shade-1">#E6E6E6</td>
+          <td class="primary-shade-1">#152246</td>
+          <td class="secondary-shade-1">#F3C462</td>
+          <td class="tertiary-shade-1">#C5C8F4</td>
+          <td class="default-shade-1">#D2D7E0</td>
         </tr>
         <tr>
-          <td class="primary-shade-2">#98374F</td>
-          <td class="secondary-shade-2">#EFC395</td>
-          <td class="tertiary-shade-2">#344D6D</td>
-          <td class="default-shade-2">#CFCFCF</td>
+          <td class="primary-shade-2">#212D4D</td>
+          <td class="secondary-shade-2">#EDCD8A</td>
+          <td class="tertiary-shade-2">#A5A9E8</td>
+          <td class="default-shade-2">#BAC0CD</td>
         </tr>
       </table>
     </section>
@@ -136,16 +146,20 @@
       </h4>
       <h3>Normal paragraph example</h3>
       <p>
-        By fulfilling these distinct purposes, each page of the Chamber of Commerce website contributes to the organization's mission of supporting and promoting local businesses and fostering economic growth within the community.
+        By fulfilling these distinct purposes, each page of the Chamber of Commerce website contributes to the
+        organization's mission of supporting and promoting local businesses and fostering economic growth within the
+        community.
       </p>
       <h3>Colored paragraph example</h3>
       <p class="colored">
-        By addressing these diverse questions from different personas, the Chamber of Commerce website caters to the needs of local businesses, community advocates, and prospective residents, ensuring that it serves as a valuable resource for a wide range of visitors.
+        By addressing these diverse questions from different personas, the Chamber of Commerce website caters to the
+        needs of local businesses, community advocates, and prospective residents, ensuring that it serves as a valuable
+        resource for a wide range of visitors.
       </p>
     </section>
     <section class="client-site-map">
 
-      <h2>Site Map</h2>
+      <h2>Navigation</h2>
       <div class="sitemap">
         <div class="page1">Home</div>
         <div class="page2">Discover</div>
@@ -160,14 +174,14 @@
 
       <div class="placeholder-box">
         <div class="home wireframe">
-          <img src="images/1Corner-Home-page.webp" alt="1Corner-Home-page image">
+          <img src="" alt="wireframes">
         </div>
         <div class="home__tv wireframe">
-          <img src="images/1CornerHome-tv.webp" alt="1Corner-Home-page tablet view image">
+          <img src="" alt="wireframes">
         </div>
 
         <div class="home__pv wireframe">
-          <img src="images/1corner-phone-viewport.webp" alt="1Corner-Home-page phone view image">
+          <img src="" alt="wireframes">
         </div>
       </div>
     </section>
