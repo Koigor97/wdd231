@@ -145,12 +145,19 @@ section:not(.client-style-guide, .client-typography){
   min-width: 350px;
   margin: 30px auto;
   text-align: center;
+  /* border-collapse: collapse; */
+
+  & th,
+  & td {
+    border: 2px solid #000;
+  }
 }
 
 .colors th {
   color: var(--primary-color);
   background-color: var(--bg-text-color);
   padding-block: 1rem;
+  
 }
 
 .colors td {
@@ -158,6 +165,8 @@ section:not(.client-style-guide, .client-typography){
   width: 25%;
   height: 3em;
 }
+
+
 
 .primary {
   background-color: var(--primary-color);
