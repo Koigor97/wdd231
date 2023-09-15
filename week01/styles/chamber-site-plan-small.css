@@ -129,7 +129,7 @@ ul li {
   margin-block-end: 1rem;
 }
 
-section:not(.client-style-guide, .client-typography) {
+section:not(.color-schema-guide, .client-typography) {
   padding-block-end: 1rem;
 }
 
@@ -141,26 +141,26 @@ section:not(.client-style-guide, .client-typography) {
   content: "👤 ";
 }
 
-.color-schema {
+.colors {
   width: 100%;
   min-width: 350px;
   margin: 30px auto;
   text-align: center;
 }
 
-.color-schema th,
-.color-schema td {
+.colors th,
+.colors td {
   border: 2px solid #000;
 }
 
-.color-schema th {
+.colors th {
   color: var(--primary-color);
   background-color: var(--bg-text-color);
   padding-block: 1rem;
 
 }
 
-.color-schema td {
+.colors td {
   color: brown;
   width: 25%;
   height: 3em;
