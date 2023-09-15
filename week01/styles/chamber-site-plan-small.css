@@ -141,7 +141,7 @@ section:not(.client-style-guide, .client-typography){
     content: "👤 ";
 }
 
-.colors {
+.color-schema {
   width: 100%;
   min-width: 350px;
   margin: 30px auto;
@@ -150,19 +150,19 @@ section:not(.client-style-guide, .client-typography){
 
 }
   
-.colors th,
-.colors td {
+.color-schema th,
+.color-schema td {
     border: 2px solid #000;
   }
 
-.colors th {
+.color-schema th {
   color: var(--primary-color);
   background-color: var(--bg-text-color);
   padding-block: 1rem;
   
 }
 
-.colors td {
+.color-schema td {
   color: brown;
   width: 25%;
   height: 3em;
