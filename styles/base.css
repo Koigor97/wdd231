@@ -75,10 +75,21 @@ nav {
 
     & li {
       padding: 1rem 2rem;
+      cursor: pointer;
+    }
+
+    & a:link,
+    & a:visited {
+      color: #fff;
+      text-decoration: none;
     }
 
     & li:hover {
       background-color: var(--bg-color);
+      color: #000;
+    }
+
+    & a:hover {
       color: #000;
     }
   }
