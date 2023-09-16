@@ -1,0 +1,51 @@
+body {
+	font-family: Roboto, helvetica, sans-serif;
+}
+
+header,
+main,
+footer {
+	max-width: 760px;
+	margin: 0 auto;
+}
+
+.banner {
+	padding: 1rem;
+	background-color: #eee;
+    text-align: center;
+}
+
+h1 {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+main {
+	display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+h2 {
+	color: navy;
+	text-align: left;
+    grid-column: 1 / span 2;
+}
+
+article p {
+	text-align: justify;
+}
+
+/* efefeff9 */
+.callout {
+	color: #f8f8f8f9;
+	background-color: #702963;
+    padding-inline: 2rem;
+    padding-block: 1rem;
+    grid-column: 1 / span 2;
+}
+
+footer {
+	margin-top: 1rem;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	font-size: smaller;
+	text-align: left;
+}
