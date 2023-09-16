@@ -26,4 +26,4 @@ Week-01 is about refreshing our Web Dev knowledge since we have been on break fo
 
 ![week1 activities](images/week.webp)
 
-This is followed by building a repository portal page for quick access that link to all learning activities, assignments, and project development timeline.
+This is followed by building a repository portal page for quick access that link to all learning activities, assignments, and project development timeline. We also code up the project site plan. In it , includes the name of the project website, purpose, target audience, typography, color theme, and wireframes. We start building next week.
