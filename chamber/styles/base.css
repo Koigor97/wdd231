@@ -1,0 +1,42 @@
+:root {
+  /* Project colors */
+  --primary-color: #00113e;
+  --secondary-color: #ffbe37;
+  --tertiary-color: #edeefd;
+  --default-color: #eef0f4;
+
+  --primary-shade-1: #152246;
+  --secondary-shade-1: #F3C462;
+  --tertiary-shade-1: #C5C8F4;
+  --default-shade-1: #D2D7E0;
+
+  --primary-shade-2: #212D4D;
+  --secondary-shade-2: #EDCD8A;
+  --tertiary-shade-2: #A5A9E8;
+  --default-shade-2: #BAC0CD;
+
+  /* change the values below to your chosen font(s) */
+  --heading-font: "IBM Plex Sans Condensed", sans-serif;
+  --paragraph-font: "Poppins", sans-serif;
+
+  /* Fluid typography */
+  --step--2: clamp(0.63rem, calc(0.72rem + -0.11vw), 0.69rem);
+  --step--1: clamp(0.83rem, calc(0.83rem + 0.02vw), 0.84rem);
+  --step-0: clamp(1rem, calc(0.96rem + 0.22vw), 1.13rem);
+  --step-1: clamp(1.2rem, calc(1.1rem + 0.52vw), 1.5rem);
+  --step-2: clamp(1.44rem, calc(1.25rem + 0.97vw), 2rem);
+  --step-3: clamp(1.73rem, calc(1.4rem + 1.63vw), 2.66rem);
+  --step-4: clamp(2.07rem, calc(1.56rem + 2.57vw), 3.55rem);
+  --step-5: clamp(2.49rem, calc(1.71rem + 3.91vw), 4.74rem);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
