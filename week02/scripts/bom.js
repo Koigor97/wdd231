@@ -13,6 +13,7 @@ function addChapter() {
         deleteBtn.style.backgroundColor = "#9e9c48";
         deleteBtn.style.border= "none";
         deleteBtn.style.borderRadius = "5px";
+        deleteBtn.ariaLabel = 'Remove List-item'
         
 
 
@@ -21,6 +22,7 @@ function addChapter() {
        
         deleteBtn.addEventListener("click", () => {
             list.removeChild(listItem)
+            input.focus();
         });
         
         listItem.appendChild(deleteBtn);
