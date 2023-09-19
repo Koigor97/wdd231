@@ -1,42 +1,288 @@
+/* Custom CSS Properties */
 :root {
-  /* Project colors */
-  --primary-color: #00113e;
-  --secondary-color: #ffbe37;
-  --tertiary-color: #edeefd;
-  --default-color: #eef0f4;
+    /* Project colors */
+    --primary-color: #00113e;
+    --secondary-color: #ffbe37;
+    --tertiary-color: #edeefd;
+    --default-color: #eef0f4;
 
-  --primary-shade-1: #152246;
-  --secondary-shade-1: #F3C462;
-  --tertiary-shade-1: #C5C8F4;
-  --default-shade-1: #D2D7E0;
+    --primary-shade-1: #152246;
+    --secondary-shade-1: #F3C462;
+    --tertiary-shade-1: #C5C8F4;
+    --default-shade-1: #D2D7E0;
 
-  --primary-shade-2: #212D4D;
-  --secondary-shade-2: #EDCD8A;
-  --tertiary-shade-2: #A5A9E8;
-  --default-shade-2: #BAC0CD;
+    --primary-shade-2: #212D4D;
+    --secondary-shade-2: #EDCD8A;
+    --tertiary-shade-2: #A5A9E8;
+    --default-shade-2: #BAC0CD;
 
-  /* change the values below to your chosen font(s) */
-  --heading-font: "IBM Plex Sans Condensed", sans-serif;
-  --paragraph-font: "Poppins", sans-serif;
+    --glass-effect-bg: rgba(186, 192, 205, 0.55);
+    --blur-effect: blur(1.5rem);
+    --default-gap: 2em;
+    /* change the values below to your chosen font(s) */
+    --heading-font: "IBM Plex Sans Condensed", sans-serif;
+    --paragraph-font: "Poppins", sans-serif;
 
-  /* Fluid typography */
-  --step--2: clamp(0.63rem, calc(0.72rem + -0.11vw), 0.69rem);
-  --step--1: clamp(0.83rem, calc(0.83rem + 0.02vw), 0.84rem);
-  --step-0: clamp(1rem, calc(0.96rem + 0.22vw), 1.13rem);
-  --step-1: clamp(1.2rem, calc(1.1rem + 0.52vw), 1.5rem);
-  --step-2: clamp(1.44rem, calc(1.25rem + 0.97vw), 2rem);
-  --step-3: clamp(1.73rem, calc(1.4rem + 1.63vw), 2.66rem);
-  --step-4: clamp(2.07rem, calc(1.56rem + 2.57vw), 3.55rem);
-  --step-5: clamp(2.49rem, calc(1.71rem + 3.91vw), 4.74rem);
+    /* Fluid typography */
+    --step--2: clamp(0.63rem, calc(0.72rem + -0.11vw), 0.69rem);
+    --step--1: clamp(0.83rem, calc(0.83rem + 0.02vw), 0.84rem);
+    --step-0: clamp(1rem, calc(0.96rem + 0.22vw), 1.13rem);
+    --step-1: clamp(1.2rem, calc(1.1rem + 0.52vw), 1.5rem);
+    --step-2: clamp(1.44rem, calc(1.25rem + 0.97vw), 2rem);
+    --step-3: clamp(1.73rem, calc(1.4rem + 1.63vw), 2.66rem);
+    --step-4: clamp(2.07rem, calc(1.56rem + 2.57vw), 3.55rem);
+    --step-5: clamp(2.49rem, calc(1.71rem + 3.91vw), 4.74rem);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
+/* Basic resets */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
 }
 
+/* base settings */
 html {
-  font-size: 62.5%;
-  box-sizing: border-box;
+    font-size: 62.5%;
+    box-sizing: border-box;
 }
+
+body {
+    background-color: var(--default-color);
+    font-family: var(--paragraph-font);
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #444;
+
+}
+
+/* Header section */
+header {
+    /* min-height: 100vh; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-rows: 60px 60rem 60px;
+    place-items: center;
+    gap: 3.0rem;
+
+    background: url(../images/hero.WEBP);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    position: relative;
+}
+
+h1 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    font-size: 4.5rem;
+    text-decoration: 2.5px underline double #444;
+}
+
+nav {
+    padding-inline: 2rem;
+    /* padding-block: 1rem; */
+
+    grid-column: 3 / 5;
+    grid-row: 1 / 2;
+    gap: 6rem;
+}
+
+nav ul {
+    list-style: none;
+    gap: 1.7rem;
+}
+
+:where(nav, nav ul, .nav-links, .social-links, .socials-box, .cta-box, [role="switch"]) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+svg {
+    height: 3rem;
+    width: 3rem;
+}
+
+/* ----------------------------------------------------------- */
+/* Light - dark mode button section */
+[role="switch"] .switch {
+    position: relative;
+    display: inline-block;
+    border: 2px solid black;
+    height: 2rem;
+    width: 4rem;
+    border-radius: 1.2rem;
+}
+
+[role="switch"] .switch span {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: .8rem;
+    height: 1.2rem;
+    width: 1.2rem;
+    background: var(--primary-color);
+}
+
+[role="switch"] .on {
+    display: none;
+}
+
+[role="switch"] .off {
+  display: inline;
+}
+
+[role="switch"][aria-checked="true"] .on {
+  display: inline;
+}
+
+[role="switch"][aria-checked="true"] .off {
+  display: none;
+}
+
+/* [role="switch"]:focus,
+[role="switch"]:hover {
+  padding: 2px 2px 6px 6px;
+  border-width: 2px;
+  outline: none;
+  background-color: #def;
+  cursor: pointer;
+} */
+
+[role="switch"]:focus span.switch {
+  background-color: white;
+}
+/* ---------------------------------------------------------------------- */
+
+.logo-box img {
+    width: 100%;
+}
+
+.logo-box {
+    width: 15rem;
+    padding: .2em .5em;
+    justify-self: left;
+    margin-inline-start: 1.5rem;
+    margin-block-start: 1.5rem;
+    
+}
+
+.nav-links {
+    color: #444;
+}
+
+.nav-links:link,
+.nav-links:active {
+    color: #7a1414;
+    text-decoration: none;
+}
+
+.nav-links svg {
+    height: 2rem;
+    width: 2rem;
+    margin-inline-end: .25em;
+}
+
+.header-intro {
+    width: 50%;
+    padding-inline: 2em;
+    padding-block: 1em;
+
+    grid-row: 2 / 3;
+    grid-column: 1 / span 4;
+
+    display: grid;
+    justify-content: center;
+    gap: var(--default-gap);
+
+    position: absolute;
+    left: 10rem;
+}
+
+.header-intro p {
+    color: #131212;
+}
+
+
+.motto-text {
+    position: relative;
+    color: #0e0d0d;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.motto-text::before,
+.motto-text::after {
+    content: "\201C";
+    color: #9c9c9cb0;
+    position: absolute;
+    font-size: 12rem;
+    z-index: -1;
+}
+
+.motto-text::before {
+    top: -3rem;
+    left: -2rem;
+}
+
+.motto-text::after {
+    top: -3rem;
+    right: -2rem;
+}
+
+.socials-box {
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+
+    width: 30rem;
+    padding-block: .5em;
+    justify-content: space-evenly;
+
+    position: absolute;
+    top: -10rem;
+    left: -15rem;
+}
+
+:where(nav, .header-intro, .socials-box) {
+    background: var(--glass-effect-bg);
+    backdrop-filter: var(--blur-effect);
+}
+
+.cta-box {
+    gap: var(--default-gap);
+    justify-self: left;
+}
+
+.btn-join,
+.btn-explore {
+    border: none;
+    background-color: transparent;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: 0.25em 0.75em;
+    min-width: 10ch;
+    min-height: 4.4rem;
+}
+
+.btn-join {
+    color: #444;
+    background-color: var(--secondary-color);
+}
+
+.btn-explore {
+    color: #fff;
+    background-color: var(--primary-color);
+}
+
+
+
+/* [aria-label = "paragraph intro"] {
+    display: flex;
+} */
