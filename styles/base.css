@@ -51,14 +51,15 @@ header {
   align-items: center;
   gap: 4rem;
 
-  & img {
-    width: 100%;
-    border-radius: 5px;
-  }
+}
 
-  .img-box {
-    max-width: 25%;
-  }
+header img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.img-box {
+  max-width: 25%;
 }
 
 ul {
@@ -68,31 +69,31 @@ ul {
 nav {
   background-color: #000;
   color: #fff;
+}
 
-  & ul {
-    /* display: block; */
-    text-align: center;
+nav ul {
+  /* display: block; */
+  text-align: center;
+}
 
-    & li {
-      padding: 1rem 2rem;
-      cursor: pointer;
-    }
+nav ul li {
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
 
-    & a:link,
-    & a:visited {
-      color: #fff;
-      text-decoration: none;
-    }
+nav ul li a:link,
+nav ul li a:visited {
+  color: #fff;
+  text-decoration: none;
+}
 
-    & li:hover {
-      background-color: var(--bg-color);
-      color: #000;
-    }
+nav ul li:hover {
+  background-color: var(--bg-color);
+  color: #000;
+}
 
-    & a:hover {
-      color: #000;
-    }
-  }
+nav ul li a:hover {
+  color: #000;
 }
 
 main {
@@ -101,53 +102,53 @@ main {
   grid-template-columns: 1fr;
   gap: 5rem;
   padding: 2rem;
+}
 
-  & h2,
-  h3 {
-    text-align: center;
-  }
+main :where(h2, h3) {
+  text-align: center;
+}
 
-  & h2 {
-    color: var(--bg-color);
-    border-bottom: 3px solid var(--bg-color);
-  }
+main h2 {
+  color: var(--bg-color);
+  border-bottom: 3px solid var(--bg-color);
+}
 
-  & h3 {
-    background: var(--section-header);
-    border-radius: 0.5rem;
-    color: #000;
-  }
+main h3 {
+  background: var(--section-header);
+  border-radius: 0.5rem;
+  color: #000;
+}
 
-  & h3,
-  section {
-    padding: 1.5rem 2rem;
-  }
+main :where(section, h3) {
+  padding: 1.5rem 2rem;
+}
 
-  & ul {
-    text-indent: 2rem;
-    margin-block: 1rem;
+main ul {
+  text-indent: 2rem;
+  margin-block: 1rem;
 
-    & a:link,
-    & a:visited {
-      color: var(--header-bg);
-      display: inline-block;
-      margin-inline-end: 1.5px;
-    }
-  }
+}
 
-  & section {
-    background-color: var(--section-bg);
-    backdrop-filter: blur(6.5px);
-    border-radius: 1rem;
-    box-shadow: var(--box-shadow);
-  }
+main a:link,
+main a:visited {
+  color: var(--header-bg);
+  display: inline-block;
+  margin-inline-end: 1.5px;
+}
 
-  & :where(section:last-of-type) {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 1rem;
-  }
+
+main section {
+  background-color: var(--section-bg);
+  backdrop-filter: blur(6.5px);
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+}
+
+main :where(section:last-of-type) {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
 }
 
 footer {
