@@ -307,6 +307,7 @@ svg {
 
 figure {
     width: 80%;
+    height: 55rem;
     border: .5rem solid;
     padding-block-end: 1rem;
     background-color: var(--default-color);
@@ -359,7 +360,7 @@ figcaption {
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 10rem repeat(2, 1fr);
+    grid-auto-rows: 10rem repeat(auto-fit, 1fr);
     place-items: center;
     row-gap: var(--default-gap);
     /* border: 2px solid black; */
