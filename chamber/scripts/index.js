@@ -1,5 +1,6 @@
 "use strict";
 
+const newsContainer = document.querySelector('.news-box');
 
 class Switch {
   constructor(switchMode) {
@@ -43,34 +44,29 @@ window.addEventListener('load', function () {
   );
 });
 
+const renderNewsFeed = function(param) {
+    const theList = param["newsList"].map((items) => {
+        return `
+        <figure>
+            <img src="${items.image}" alt="">
+             <figcaption>${items.headlines}</figcaption>
+            <blockquote>
+                ${items.excerpt}
+             </blockquote>
+        </figure>
+        `
+    }).join('')
+
+    newsContainer.insertAdjacentHTML('afterbegin', theList)
+}
+
 const getNews = async function(fileName) {
     const url = `./data/${fileName}.json`;
+    const response = await fetch(url);
+    const data = await response.json();
 
-    try {
-        const response = await fetch(url);
-        const data = await response.json();
-
-        if(!response.ok) throw new Error('There was problem getting the data');
-
-        return data;
-    }catch(error) {
-        console.log(error);
-    }
-
+    renderNewsFeed(data)
 } 
 
+getNews("news");
 
-class NewsClass {
-    _newFeeds;
-    _newFeedLength;
-    constructor(parent, getData, file) {
-        this.parentBox = parent;
-        [this._newFeeds] = getData(file);
-        this._newFeedLength = this._newFeeds.length;
-
-        _
-
-
-
-    }
-}
