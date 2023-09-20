@@ -4,47 +4,47 @@
         {
             "headlines": "Local Businesses Thrive Post-Pandemic",
             "excerpt": "This report highlights the resilience and success of local businesses in our community as they navigate the challenges of a post-pandemic economy. Interviews with business owners and statistics on growth showcase the vibrancy of our business ecosystem.",
-            "image": "../images/shops.WEBP"
+            "image": "./images/shops.WEBP"
         },
         {
             "headlines": "Exciting Networking Events Announced",
             "excerpt": "Stay connected and boost your business prospects with our upcoming networking events. This report unveils the Chamber's calendar of events designed to foster meaningful connections and partnerships among our members and the community.",
-            "image": "../images/networking.WEBP"
+            "image": "./images/networking.WEBP"
         },
         {
             "headlines": "Startups Flock to Our Region",
             "excerpt": " Discover how innovative startups are choosing our region as their launchpad. This report profiles a few standout startups that have recently set up shop here, highlighting the supportive environment for entrepreneurial ventures.",
-            "image": "../images/startups.WEBP"
+            "image": "./images/startups.WEBP"
         },
 
         {
             "headlines": "Local Nonprofits Forge Community Impact",
             "excerpt": " Collaboration takes center stage as local nonprofits partner to address critical community needs. Learn about the impactful initiatives and projects that these organizations are spearheading for the betterment of our community.",
-            "image": "../images/community.WEBP"
+            "image": "./images/community.WEBP"
         },
 
         {
             "headlines": "Chamber Launches Small Business Support",
             "excerpt": "The Chamber is committed to the growth of small businesses. This report introduces our latest initiative—a comprehensive support program designed to empower small businesses with resources, mentorship, and funding opportunities.",
-            "image": "../images/support.WEBP"
+            "image": "./images/support.WEBP"
         },
 
         {
             "headlines": "Tech Boom: Our Region's Rise",
             "excerpt": "Our region is experiencing a tech renaissance. Explore the burgeoning tech scene with insights from local tech leaders, highlighting the emergence of our region as a burgeoning tech hub.",
-            "image": "../images/tech.WEBP"
+            "image": "./images/tech.WEBP"
         },
 
         {
             "headlines": "Annual Awards Gala Celebrates Excellence",
             "excerpt": " Relive the glitz and glamour of our Annual Awards Gala through this recap. Discover the exceptional individuals and businesses honored for their outstanding contributions to our community.",
-            "image": "../images/gala.WEBP"
+            "image": "./images/gala.WEBP"
         },
 
         {
             "headlines": "Local Businesses Champion Sustainability",
             "excerpt": " Sustainability takes center stage as local businesses embrace eco-friendly practices. This report showcases how our community's businesses are implementing sustainable initiatives, reducing their carbon footprint, and making a positive impact on the environment.",
-            "image": "../images/sustainabilty.WEBP"
+            "image": "./images/sustainabilty.WEBP"
         }
     ]
 }
