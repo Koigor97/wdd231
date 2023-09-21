@@ -69,6 +69,7 @@ ul {
 nav {
   background-color: #000;
   color: #fff;
+  position: relative;
 }
 
 nav ul {
@@ -155,3 +156,32 @@ footer {
   text-align: center;
   padding: 1.5rem 1rem;
 }
+
+#menu {
+	font-size: 1.5rem;
+	border: 1px solid rgba(0,0,0,.3);
+	padding: 3px 7px 6px;
+	background-color: #eee;
+	color: #000;
+  width: 100%;
+  height: 5rem;
+}
+
+#menu::before {
+	content: "☰";
+  font-size: 3rem;
+}
+
+#menu.open::before {
+	content: "❎";
+}
+
+.navigation li {
+	display: none;
+}
+
+.open li {
+	display: block;
+	width: 100%;
+}
+
