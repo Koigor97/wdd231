@@ -379,15 +379,20 @@ figcaption {
     grid-column: 3 / 4;
 }
 
+.events-box {
+    grid-row: 1 / 3;
+}
+
 .events-box,
 .weather-box {
     color: var(--default-color);
     background-color: var(--primary-color); /* #C1C1C1*/
     padding-inline: 1em;
 
-    display: grid;
-    justify-content: center;
-    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* gap: 3rem; */
     box-shadow: 0 0 0 3px var(--primary-shade-2), var(--box-shadow-all-4sides);
     
 }
@@ -395,6 +400,18 @@ figcaption {
 .events-box h2,
 .weather-box h2 {
     text-decoration: underline double var(--default-color);
-    justify-self: center;
-    align-self: center;
+    align-self: center; 
+    /* justify-self: center; */
+}
+
+.events-box div {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.event-time {
+    background-color: var(--tertiary-shade-2);
+    padding: 1rem 1.5rem;
+    border-radius: .5rem;
+    cursor: pointer;
 }

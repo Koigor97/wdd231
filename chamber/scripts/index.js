@@ -1,5 +1,6 @@
 "use strict";
 
+
 const newsContainer = document.querySelector('.news-box');
 
 class Switch {
@@ -39,10 +40,12 @@ window.addEventListener('load', function () {
   Array.from(document.querySelectorAll('[role^=switch]')).forEach(
     (element) => {
         new Switch(element)
-        console.log(element);
+        // console.log(element);
     }
   );
 });
+
+const dataContent = JSON.parse(data)
 
 const renderNewsFeed = function(param) {
     const theList = param["newsList"].map((items) => {
@@ -60,13 +63,16 @@ const renderNewsFeed = function(param) {
     newsContainer.insertAdjacentHTML('afterbegin', theList)
 }
 
-const getNews = async function(fileName) {
-    const url = `./data/${fileName}.json`;
-    const response = await fetch(url);
-    const data = await response.json();
+console.log(dataContent);
 
-    renderNewsFeed(data)
-} 
+// const fetchData = async function(fileName) {
+//     const url = `./data/${fileName}.json`;
+//     const response = await fetch(url);
+//     const data = await response.json();
+//     console.log(data);
 
-getNews("news");
+//     // renderNewsFeed(data)
+// }
+
+// fetchData("dataApi")
 
