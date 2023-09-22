@@ -582,3 +582,54 @@ figcaption {
 .explore-text-box h2 {
     justify-self: center;
 }
+
+/* ----------------------FOOTER----------------------- */
+footer {
+    padding-block: 5em;
+    color: #565656b6;
+
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+
+footer h4 {
+    font-family: var(--heading-font);
+    color: #444;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer svg {
+    fill: #444444d1;
+}
+
+address a,
+.contact a {
+    color: #444444d1;
+}
+
+address, 
+.contact ul {
+    display: grid;
+    row-gap: 1rem;
+
+}
+
+.contact a {
+    text-decoration: none;
+}
+
+.footer-socials ul {
+    display: flex;
+    gap: 1rem;
+}
+
+[aria-label$="Container"] {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+}
