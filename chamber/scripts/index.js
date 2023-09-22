@@ -2,6 +2,8 @@
 
 
 const newsContainer = document.querySelector('.news-box');
+const eventBox = document.querySelector('.event-details')
+const modal = document.getElementById('modal');
 
 class Switch {
   constructor(switchMode) {
@@ -39,40 +41,10 @@ window.addEventListener('load', function () {
   // Initialize the Switch component on all matching DOM nodes
   Array.from(document.querySelectorAll('[role^=switch]')).forEach(
     (element) => {
-        new Switch(element)
-        // console.log(element);
+      new Switch(element)
+      // console.log(element);
     }
   );
 });
 
-const dataContent = JSON.parse(data)
-
-const renderNewsFeed = function(param) {
-    const theList = param["newsList"].map((items) => {
-        return `
-        <figure>
-            <img src="${items.image}" alt="">
-             <figcaption>${items.headlines}</figcaption>
-            <blockquote>
-                ${items.excerpt}
-             </blockquote>
-        </figure>
-        `
-    }).join('')
-
-    newsContainer.insertAdjacentHTML('afterbegin', theList)
-}
-
-console.log(dataContent);
-
-// const fetchData = async function(fileName) {
-//     const url = `./data/${fileName}.json`;
-//     const response = await fetch(url);
-//     const data = await response.json();
-//     console.log(data);
-
-//     // renderNewsFeed(data)
-// }
-
-// fetchData("dataApi")
 
