@@ -1,10 +1,6 @@
 "use strict";
 
 
-const newsContainer = document.querySelector('.news-box');
-const eventBox = document.querySelector('.event-details')
-const modal = document.getElementById('modal');
-
 class Switch {
   constructor(switchMode) {
     this.switchBtn = switchMode;
@@ -48,3 +44,10 @@ window.addEventListener('load', function () {
 });
 
 
+const cloneAndAppendLogos = function() {
+  const parentBox = document.querySelector('.partners');
+  const cloneVersion = document.querySelector('.partner-slide').cloneNode(true);
+  parentBox.appendChild(cloneVersion)
+}
+
+cloneAndAppendLogos();
