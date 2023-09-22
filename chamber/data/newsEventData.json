@@ -54,56 +54,56 @@
             "eventDate": "Aug/15/2023, 6:00 PM - 8:00 PM", 
             "event": "Business Mixer: Connect & Collaborate",
             "description": "Join us for an evening of lively networking, meaningful discussions, and valuable connections at our Business Mixer: Connect & Collaborate event.",
-            "image": "../images/connect.WEBP"
+            "image": "./images/connect.WEBP"
         },
 
         {
             "eventDate": "Sep/10/2023, 9:00 AM - 4:00 PM", 
             "event": "Small Business Expo 2023",
             "description": "Explore a vibrant showcase of local small businesses at our Small Business Expo 2023. Support our community and discover innovative products and services.",
-            "image": "../images/expo.WEBP"
+            "image": "./images/expo.WEBP"
         },
 
         {
             "eventDate": "Oct/05/2023, 12:00 PM - 1:30 PM", 
             "event": "Lunch & Learn: Digital Marketing",
             "description": " Gain insights and actionable strategies in digital marketing at our Lunch & Learn event. Learn from industry experts and enhance your online presence.",
-            "image": "../images/marketing.WEBP"
+            "image": "./images/marketing.WEBP"
         },
 
         {
             "eventDate": "Nov/18/2023, 5:30 PM - 7:30 PM", 
             "event": "Annual Community Gala",
             "description": "Celebrate local achievements in style at our Annual Community Gala. Join us for an evening of gourmet dining, entertainment, and honoring outstanding contributors.",
-            "image": "../images/gala.WEBP"
+            "image": "./images/gala.WEBP"
         },
 
         {
             "eventDate": "Dec/02/2023, 10:00 AM - 3:00 PM", 
             "event": "Holiday Bazaar: Shop Local",
             "description": " Get into the festive spirit at our Holiday Bazaar: Shop Local event. Explore a marketplace filled with unique gifts, artisanal crafts, and delectable treats from local businesses.",
-            "image": "../images/baza.WEBP"
+            "image": "./images/baza.WEBP"
         },
 
         {
             "eventDate": "Jan/25/2024, 8:30 AM - 10:00 AM", 
             "event": "Economic Outlook 2024",
             "description": " Start the year with valuable insights! Join our Breakfast Briefing on the Economic Outlook 2024, featuring expert analysis and key trends for the year ahead.",
-            "image": "../images/economic.WEBP"
+            "image": "./images/economic.WEBP"
         },
 
         {
             "eventDate": "Feb/12/2024, 7:00 PM - 9:00 PM", 
             "event": "Valentine's Networking Soiree",
             "description": "Elevate your networking game with a touch of romance at our Valentine's Networking Soiree. Forge meaningful connections in a charming ambiance.",
-            "image": "../images/valentine.WEBP"
+            "image": "./images/valentine.WEBP"
         },
 
         {
             "eventDate": "Mar/20/2024, 11:00 AM - 2:00 PM", 
             "event": "Community Cleanup Day",
             "description": "Join hands with the community for a day of positive impact at our Community Cleanup Day. Together, we'll make our region cleaner and more inviting.",
-            "image": "../images/cleanup.WEBP"
+            "image": "./images/cleanup.WEBP"
         }
     ]
 }
