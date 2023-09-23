@@ -5,6 +5,7 @@
     --secondary-color: #ffbe37;
     --tertiary-color: #edeefd;
     --default-color: #eef0f4;
+    --optional-color: #d68c45;
 
     --primary-shade-1: #152246;
     --secondary-shade-1: #F3C462;
@@ -93,11 +94,12 @@ h1 {
 
 nav {
     padding-inline: 2rem;
-
+    /* padding-block: .2em; */
     grid-column: 3 / 5;
     grid-row: 1 / 2;
     gap: 6rem;
     justify-self: end;
+    align-self: self-end;
 
 }
 
@@ -115,23 +117,6 @@ nav ul {
 svg {
     height: 3rem;
     width: 3rem;
-}
-
-dialog {
-    max-width: 50ch;
-    display: flex;
-    font-size: 1.6rem;
-}
-
-dialog h4 {
-    font-family: var(--heading-font);
-    font-size: 2rem;
-}
-
-dialog div {
-    padding: 1rem 2rem;
-    display: grid;
-    gap: 1rem;
 }
 
 .homepage-body  h2 {
@@ -174,6 +159,7 @@ dialog div {
 
 [role="switch"][aria-checked="true"] .on {
     display: inline;
+    
 }
 
 [role="switch"][aria-checked="true"] .off {
@@ -181,8 +167,8 @@ dialog div {
 }
 
 .moveRight {
+    background-color: var(--secondary-color);
     translate: 2rem 0;
-
 }
 
 /* [role="switch"]:focus,
@@ -199,32 +185,31 @@ dialog div {
 }
 
 /* ---------------------------------------------------------------------- */
+.logo-box {
+    width: 15rem;
+    justify-self: left;
+    align-self: self-start;
+}
 
 .logo-box img {
     width: 100%;
     padding: 1.5rem 0;
 }
 
-.logo-box a {
-    display: inline-block;
-
-}
-
-.logo-box {
-    width: 15rem;
-    /* padding: .2em .5em; */
-    justify-self: left;
-}
-
 .nav-links {
     color: #444;
-}
-
-.nav-links:link,
-.nav-links:active {
-    color: #7a1414;
+    padding: .4em;
     text-decoration: none;
 }
+
+
+.active,
+.nav-links:hover {
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    fill: var(--secondary-color);
+}
+
 
 .nav-links svg {
     height: 2rem;
@@ -288,6 +273,10 @@ dialog div {
     box-shadow: var(--box-shadow-effect);
 }
 
+.social-links:hover {
+    fill: var(--default-color);
+}
+
 :where(nav, .header-intro, .socials-box) {
     background: var(--glass-effect-bg);
     backdrop-filter: var(--blur-effect);
@@ -308,6 +297,7 @@ dialog div {
     padding: 0.25em 0.75em;
     min-width: 10ch;
     min-height: 4.4rem;
+    transition: transform .2s;
 }
 
 .btn-join {
@@ -318,6 +308,16 @@ dialog div {
 .btn-explore {
     color: #fff;
     background-color: var(--primary-color);
+}
+
+.btn-explore:hover,
+.btn-join:hover {
+    transform: scale(1.1);
+}
+
+.btn-explore:active,
+.btn-join:active {
+    transform: scale(1);
 }
 
 .header-intro,
@@ -335,10 +335,15 @@ figure {
     border: .5rem solid;
     padding-block-end: 1rem;
     background-color: var(--default-color);
+    transition: all .2s;
 
     display: flex;
     flex-direction: column;
     gap: 2rem;
+}
+
+figure:hover {
+    transform: translateY(-10px);
 }
 
 figure :not(img) {
@@ -363,7 +368,7 @@ figcaption {
 .news-event-section {
     display: grid;
     place-content: center;
-    padding-block: 7em;
+    padding-block: 10em;
 }
 
 .news-event-section h2 {
@@ -386,14 +391,37 @@ figcaption {
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: min-content repeat(auto-fit, 1fr);
+    grid-auto-rows: min-content repeat(1fr);
     place-items: center;
     row-gap: var(--default-gap);
-    /* gap: 2em; */
+    
 
     padding-block-end: 3em;
-    background-color: rgb(214 140 69 /.5);
+    background-color: rgba(214, 139, 69, 0.67);
     position: relative;
+}
+
+.news-box::before,
+.news-box::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.news-box::before {
+    transform: skewX(20deg);
+    top: 5rem;
+    left: 10rem;
+    border: 2rem double #d68b453c;
+}
+
+.news-box::after {
+    transform: skewX(-20deg);
+    top: -5rem;
+    right: -10rem;
+    border: 2rem dashed #d68b453c;
 }
 
 
@@ -416,7 +444,6 @@ figcaption {
 .weather-box {
     color: var(--default-color);
     background-color: var(--primary-color);
-    /* #C1C1C1*/
     padding-inline: 1em;
 
     display: grid;
@@ -429,7 +456,7 @@ figcaption {
 
 .events-box h2,
 .weather-box h2 {
-    text-decoration-color: double var(--default-color);
+    text-decoration-color: var(--default-color);
     align-self: center;
     justify-self: center;
 }
@@ -444,12 +471,22 @@ figcaption {
     padding: 1rem 1.5rem;
     border-radius: .5rem;
     cursor: pointer;
+    transition: all .2s;
+}
+
+.event-time:hover {
+    box-shadow: 0 0 .7rem .5rem var(--default-color);
+}
+
+.event-time:active {
+    box-shadow: 0 0 .5rem .3rem var(--default-color);
 }
 /* ---------------------PARTNERS SECTION ------------------- */
 .partners {
     overflow: hidden;
     white-space: nowrap;
     padding-block: 2em;
+    /* margin-block: 5em; */
 
     background-color: #ffffff;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%23eef0f4' fill-opacity='1'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
@@ -461,11 +498,10 @@ figcaption {
 }
 
 .partners h2 {
-    /* color: var(--primary-color); */
+    color: #444;
     font-family: var(--heading-font);
     text-align: center;
     margin-block-end: 2em;
-    letter-spacing: 2;
 }
 
 .partner-slide {
@@ -491,17 +527,12 @@ figcaption {
 /* -------------OUR SERVICES ------------------ */
 
 .services-section {
-    height: 60vh;
     display: grid;
     place-items: center;
-    row-gap: 5rem;
-    padding-block-start: 2em;
-    padding-block-end: 4em;
+    row-gap: 10rem;
+    padding-block: 5em 10em;
 }
 
-/* .services-section h3 {
-    align-self: baseline;
-} */
 
 .service-card-box {
     width: 60%;
@@ -526,24 +557,17 @@ figcaption {
     text-align: center;
     display: grid;
     row-gap: 1rem;
-
     background-color: #fff;
     padding: 1.5em 2em;
     border-radius: 1rem;
     box-shadow: 0 0 0 3px var(--primary-color),
                 0 1rem 2rem -.5rem var(--primary-color);
     position: relative;
-    cursor: pointer;
 }
 
-/* .card::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-left: 5px solid black;
-    border-top: 5px solid black;
-    border-radius: inherit;
+/* .card:hover {
+    fill: var(--primary-color);
+    background-color: var(--secondary-color);
 } */
 
 /* ------------------EXPLORE SECTION--------------- */
