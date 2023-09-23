@@ -53,6 +53,7 @@ const cloneAndAppendLogos = function () {
   parentBox.appendChild(cloneVersion);
 }
 
+
 const hoverFadeInOut = function (e) {
   if (e.target.classList.contains('nav-links')) {
     const theNav = e.target;
