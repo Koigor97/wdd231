@@ -1,5 +1,7 @@
 "use strict";
 
+const nav = document.querySelector('.header-nav');
+
 
 class Switch {
   constructor(switchMode) {
@@ -28,6 +30,7 @@ class Switch {
     // console.log(newState);
 
     this.switchBtn.setAttribute('aria-checked', newState);
+    // switchDot.classList.toggle('dot');
     switchDot.classList.toggle('moveRight');
   }
 }
@@ -44,10 +47,46 @@ window.addEventListener('load', function () {
 });
 
 
-const cloneAndAppendLogos = function() {
+const cloneAndAppendLogos = function () {
   const parentBox = document.querySelector('.partners');
   const cloneVersion = document.querySelector('.partner-slide').cloneNode(true);
-  parentBox.appendChild(cloneVersion)
+  parentBox.appendChild(cloneVersion);
 }
+
+const hoverFadeInOut = function (e) {
+  if (e.target.classList.contains('nav-links')) {
+    const theNav = e.target;
+    const linksList = theNav.closest('.nav-list').querySelectorAll('.nav-links');
+
+    linksList.forEach(theLink => {
+      if (theLink !== theNav) {
+        theLink.style.opacity = this;
+
+      }
+    });
+  }
+}
+
+nav.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (e.target.classList.contains('nav-links')) {
+    const links = e.target
+      .closest(".nav-list")
+      .querySelectorAll(".nav-links");
+
+    const theLink = e.target;
+    links.forEach((e) => {
+      e.classList.remove("active");
+    });
+
+    if (theLink.tagName.toLowerCase() !== "a") return;
+    theLink.classList.add("active");
+  }
+
+});
+
+
+nav.addEventListener('mouseover', hoverFadeInOut.bind(0.5))
+nav.addEventListener('mouseout', hoverFadeInOut.bind(1))
 
 cloneAndAppendLogos();
