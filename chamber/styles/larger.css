@@ -1,0 +1,195 @@
+@media only screen and (min-width: 56.25em) {
+    html {
+        font-size: 62.5%;
+    }
+
+    header {
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 60px 1fr;
+        place-items: center;
+        gap: 3.0rem;
+        padding-inline: 2rem;
+        padding-block-end: 2rem;
+    }
+
+    h1 {
+        font-size: 4.5rem;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        grid-column: 3 / 5;
+        grid-row: 1 / 2;
+        justify-self: end;
+        align-self: self-end;
+    }
+
+    /* nav ul {
+        gap: 1.7rem;
+    } */
+
+    :where(nav ul, .nav-links, .social-links, .socials-box, .cta-box, [role="switch"]) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-links {
+        padding-inline: 1em;
+        padding-block: .5em;
+    }
+
+    .header-box {
+        width: 60%;
+        grid-row: 2 / 3;
+        grid-column: 1 / span 3;
+        justify-self: center;
+
+        gap: var(--default-gap);
+    }
+
+    .header-intro {
+        text-align: left;
+    }
+
+    .logo-box {
+        width: 15rem;
+        justify-self: left;
+        align-self: self-start;
+    }
+
+    .logo-box img {
+        padding: 1.5rem 0;
+    }
+
+    .cta-box {
+        gap: var(--default-gap);
+        justify-self: left;
+    }
+
+    .btn-join,
+    .btn-explore {
+        padding: 0.25em 0.75em;
+        min-width: 10ch;
+        min-height: 4.4rem;
+    }
+
+    .btn-explore:hover,
+    .btn-join:hover {
+        transform: scale(1.1);
+    }
+
+    .btn-explore:active,
+    .btn-join:active {
+        transform: scale(1);
+    }
+
+    figure {
+        width: 80%;
+        height: 90%;
+        transition: all .2s;
+        gap: 2rem;
+    }
+
+    figure:hover {
+        transform: translateY(-10px);
+    }
+
+    .news-event-section {
+        padding-block: 10em;
+        overflow: auto;
+    }
+
+    .news-event-section-box {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 7rem;
+        width: 80vw;
+    }
+
+    .news-box {
+        grid-column: 1 / 3;
+        grid-row: 1 / 5;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: min-content repeat(2, 1fr);
+        place-items: center;
+        row-gap: var(--default-gap);
+
+
+        padding-block-end: 3em;
+
+    }
+
+    .weather-box {
+        color: var(--default-color);
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+        text-align: center;
+    }
+
+    .services-section {
+        display: grid;
+        place-items: center;
+        row-gap: 10rem;
+        padding-block: 5em 10em;
+    }
+
+    .service-card-box {
+        width: 60%;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--default-gap);
+    }
+
+    .card svg {
+        width: 5rem;
+        height: 5rem;
+        fill: var(--default-shade-2);
+    }
+
+    .card {
+        background-color: #fff;
+    }
+
+    .card:hover {
+        background-color: var(--secondary-color);
+    }
+
+    .card:hover svg {
+        fill: var(--primary-color);
+    }
+
+
+    .explore {
+        flex-direction: row;
+        gap: 0;
+    }
+
+    .mini-gallery-box {
+        width: 50%;
+    }
+
+    .explore-text-box {
+        width: 35%;
+    }
+
+    footer {
+        align-items: flex-start;
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .footer-social-links:hover svg {
+        fill: var(--optional-color);
+    }
+
+
+}
