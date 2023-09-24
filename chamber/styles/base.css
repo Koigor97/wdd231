@@ -325,14 +325,15 @@ svg {
 /* -------------- NEWS-EVENTS-WEATHER-SECTION --------------- */
 
 figure {
-    /* width: 80%; */
-    height: 100%;
+    width: 80%;
     border: .5rem solid;
     padding-block-end: 1rem;
     background-color: var(--default-color);
     display: flex;
     flex-direction: column;
     gap: 2rem;
+
+    margin: 1.5em auto;
 }
 
 figure :not(img) {
@@ -362,6 +363,7 @@ figcaption {
 .news-event-section h2 {
     font-family: var(--heading-font);
     letter-spacing: 2px;
+    text-align: center;
 }
 
 .news-event-section-box {
@@ -373,9 +375,6 @@ figcaption {
 
 .news-box {
     grid-row: 1 / 5;
-    display: grid;
-    grid-template-rows: min-content 1fr;
-    place-items: center;
     padding-block-end: 3em;
     padding-inline: 1.5em;
     background-color: rgba(214, 139, 69, 0.67);
@@ -648,6 +647,11 @@ address a:hover,
         grid-auto-rows: 1fr;
         gap: 5rem;
         width: 85vw;
+    }
+
+    figure {
+        height: 100%;
+        width: 100%;
     }
 
     .news-box {
