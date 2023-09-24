@@ -1,7 +1,7 @@
 "use strict";
 
 const nav = document.querySelector('.header-nav');
-
+const menuBtn = document.querySelector('.menu-btn');
 
 class Switch {
   constructor(switchMode) {
@@ -47,9 +47,9 @@ window.addEventListener('load', function () {
 });
 
 
-const cloneAndAppendLogos = function () {
-  const parentBox = document.querySelector('.partners');
-  const cloneVersion = document.querySelector('.partner-slide').cloneNode(true);
+const toggleMenu = function () {
+  nav.classList.toggle('show-nav')
+  
   parentBox.appendChild(cloneVersion);
 }
 
@@ -90,4 +90,7 @@ nav.addEventListener("click", (e) => {
 nav.addEventListener('mouseover', hoverFadeInOut.bind(0.5))
 nav.addEventListener('mouseout', hoverFadeInOut.bind(1))
 
-cloneAndAppendLogos();
+menuBtn.addEventListener('click', toggleMenu);
+// cloneAndAppendLogos();
+
+
