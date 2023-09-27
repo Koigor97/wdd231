@@ -343,6 +343,7 @@ figure :not(img) {
 figure img {
     object-fit: cover;
     width: 100%;
+    height: auto;
 }
 
 figcaption {
@@ -355,9 +356,9 @@ figcaption {
 
 .news-event-section {
     display: grid;
-    place-content: center;
     padding-block: 5em;
     overflow: hidden;
+    justify-content: center;
 }
 
 .news-event-section h2 {
@@ -560,6 +561,7 @@ figcaption {
 
 .mini-gallery-box img {
     width: 100%;
+    height: auto;
     border-radius: 1rem;
     box-shadow: var(--box-shadow-effect);
 }
