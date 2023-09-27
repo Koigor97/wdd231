@@ -131,6 +131,15 @@
         text-align: center;
     }
 
+    .partner-slide {
+        flex-direction: row;
+    }
+
+    .partner-slide img {
+        width: 20%;
+    }
+
+
     .services-section {
         display: grid;
         place-items: center;

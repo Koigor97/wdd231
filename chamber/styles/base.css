@@ -18,7 +18,7 @@
     --default-shade-2: #BAC0CD;
 
     --glass-effect-bg: rgba(186, 192, 205, 0.55);
-    --blur-effect: blur(1.5rem);
+    --blur-effect: blur(2.5rem);
     --box-shadow-effect: 8px 8px 8px -6px rgba(0, 0, 0, 0.18);
     --box-shadow-all-4sides: 0 0 2rem rgba(0, 0, 0, 0.18);
     --box-shadow-all-4sides-cleaner: 0 0 2rem -5px rgba(0, 0, 0, 0.18);
@@ -59,7 +59,7 @@ body {
     font-family: var(--paragraph-font);
     font-size: 1.8rem;
     font-weight: 400;
-    color: #444;
+    color: #282828;
 
 }
 
@@ -175,6 +175,7 @@ svg {
 
 .logo-box img {
     width: 100%;
+    height: auto;
 }
 
 .nav-links {
@@ -477,7 +478,9 @@ figcaption {
 .partner-slide {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 2rem;
+    
 }
 
 .partner-slide:last-of-type {
@@ -492,9 +495,8 @@ figcaption {
 }
 
 .partner-slide img {
-    object-fit: scale-down;
-    height: 5vh;
-    margin-inline: 4rem;
+    width: 20%;
+    height: auto;
 }
 
 
@@ -590,9 +592,10 @@ footer {
     text-align: center;
 }
 
-footer h4 {
+.footer-captions {
     font-family: var(--heading-font);
     color: #444;
+    font-weight: 600;
 }
 
 footer ul {
