@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto:wght@400;700&display=swap"
     rel="stylesheet" />
-    <link rel="stylesheet" href="styles/normalise.css">
+  <link rel="stylesheet" href="styles/normalise.css">
   <link rel="stylesheet" href="styles/base.css" />
   <link rel="stylesheet" href="styles/larger.css" />
 </head>
@@ -25,7 +25,7 @@
 <body>
   <header>
     <div class="img-box">
-      <img src="images/user.webp" alt="Photo of Samuel Turay. The author" title="Samuel Turay" width="400" />
+      <img src="images/user.webp" alt="Photo of Samuel Turay. The author" title="Samuel Turay" width="500" height="350" loading="lazy"/>
     </div>
     <h1>Samuel Turay</h1>
   </header>
@@ -47,15 +47,30 @@
       </li>
       <li>
         <a href="#">Form</a>
-
       </li>
+      <div aria-label="Light and dark mode toggle switch" role="switch" aria-checked="false" tabindex="0">
+      <span class="switch">
+        <span></span>
+      </span>
+    </div>
     </ul>
+
+    
   </nav>
 
   <main>
+    <figure>
+      <picture>
+        <source media="(max-width: 400px)" srcset="images/hero-small.webp">
+        <source media="(max-width: 960px)" srcset="images/hero-medium.webp">
+        <img src="images/hero-large.webp" alt="Photo of Ghana Accra Temple" width="1080" height="720" loading="lazy">
+      </picture>
+      <figcaption>Ghana Accra Temple</figcaption>
+    </figure>
+
     <h2>WDD 230: Web Frontend Development</h2>
 
-    <section class="card">
+    <section class="activity-sec card">
       <h3>Learning activities</h3>
       <ul>
         <li>
@@ -99,11 +114,15 @@
       </ul>
     </section>
 
-    <section class="card">
+    <section class="weather-sec card">
       <h3>Information</h3>
       <span>Freetown, Sierra Leone</span>
       <span>Weather: 23℃ Partly CLoudy skies 🌤️</span>
       <span>Current number of visit to the page is: 8</span>
+    </section>
+
+    <section class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14370.874205228938!2d28.33450565!3d-25.779858299999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sza!4v1695898987324!5m2!1sen!2sza" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
   </main>
 

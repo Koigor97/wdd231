@@ -1,7 +1,7 @@
 :root {
   /* creating custom property values / variables */
   --font-family: "Roboto Mono", monospace, san-serif;
-  --box-shadow: 0 1rem 1.2rem 1rem #dddddd40;
+  --box-shadow: 0 0 2rem -5px rgba(105, 105, 105, 0.26);
   --fluid-text-0: clamp(1rem, calc(0.96rem + 0.22vw), 1.13rem);
   --fluid-text-1: clamp(1.2rem, calc(1.1rem + 0.52vw), 1.5rem);
   --fluid-text-2: clamp(1.44rem, calc(1.25rem + 0.97vw), 2rem);
@@ -34,12 +34,13 @@ body {
 
   display: grid;
   justify-content: center;
+  /* grid-auto-rows: max-content; */
 }
 
 header,
 footer {
   background-color: var(--header-bg);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(6px);
 }
 
 header {
@@ -55,6 +56,7 @@ header {
 
 header img {
   width: 100%;
+  height: auto;
   border-radius: 5px;
 }
 
@@ -73,7 +75,6 @@ nav {
 }
 
 nav ul {
-  /* display: block; */
   text-align: center;
 }
 
@@ -103,6 +104,28 @@ main {
   grid-template-columns: 1fr;
   gap: 5rem;
   padding: 2rem;
+}
+
+figure {
+  position: relative;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+}
+
+figcaption {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  transform: translate(-10%, -10%);
+  color: #000;
+  background-color: var(--bg-color);
+  padding-inline: 2em;
+  padding-block: 2em;
+  font-weight: 600;
+  text-shadow: -1rem 2px 2rem;
 }
 
 main :where(h2, h3) {
@@ -140,7 +163,7 @@ main a:visited {
 
 main section {
   background-color: var(--section-bg);
-  backdrop-filter: blur(6.5px);
+  backdrop-filter: blur(1.5rem);
   border-radius: 1rem;
   box-shadow: var(--box-shadow);
 }
@@ -155,6 +178,7 @@ main :where(section:last-of-type) {
 footer {
   text-align: center;
   padding: 1.5rem 1rem;
+
 }
 
 #menu {
@@ -185,3 +209,46 @@ footer {
 	width: 100%;
 }
 
+/* ----------------------------------------------------------- */
+/* Light - dark mode button section */
+
+[role="switch"] {
+  display: inline-block;
+  padding-inline: 1rem;
+  padding-block: .5rem;
+  align-self: center;
+}
+
+[role="switch"] .switch {
+    display: flex;
+    align-items: center;
+    border: 2px solid #fff;
+    height: 2.5rem;
+    width: 4.5rem;
+    border-radius: 1.2rem;
+    padding-inline-start: 1px;
+
+}
+
+[role="switch"] .switch span {
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: .8rem;
+    height: 1.7rem;
+    width: 1.7rem;
+    background: white;
+    transition: all .3s;
+}
+
+.moveRight {
+    background: var(--section-header);
+    transform: translateX(2rem);
+}
+
+[role="switch"]:focus span.switch {
+    background: var(--bg-color);
+}
+
+[role="switch"]:focus .switch span {
+    background: orange;
+}

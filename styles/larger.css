@@ -3,6 +3,8 @@
     font-size: 62.5%;
   }
 
+  /* body {} */
+
   header {
     font-size: var(--fluid-text-3);
   }
@@ -30,22 +32,40 @@
   }
 
   main {
-    height: 80rem;
+    height: 100em;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 80px 2fr;
-    margin-block: 7rem;
+    grid-template-rows: 1fr 80px 2fr 1fr;
+  }
+
+  figure {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+  }
+
+  figcaption {
+    font-size: 2.5rem;
   }
 
   main h2 {
     text-align: left;
     align-self: center;
-    grid-row: 1 / 2;
+    grid-row: 2 / 3;
     grid-column: 1 / 4;
   }
 
-  main section:first-of-type {
-    grid-row: 2 / 3;
+  .activity-sec {
+    grid-row: 3 / 4;
     grid-column: 1/ 3;
+  }
+
+  .weather-sec {
+    grid-row: 3 / 4;
+    grid-row: 3 / 4;
+  }
+
+  .map {
+    grid-column: 1 / 4;
+    grid-row: 4 / 5;
   }
 
   main ul {
@@ -60,7 +80,11 @@
   }
 
   .navigation li {
-	display: block;
-}
+    display: block;
+  }
+
+  footer {
+    align-self: self-end;
+  }
 
 }
