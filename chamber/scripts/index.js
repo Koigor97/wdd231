@@ -2,6 +2,8 @@
 
 const nav = document.querySelector('.header-nav');
 const menuBtn = document.querySelector('.menu-btn');
+const theYear = document.querySelector('#year');
+const lastModify = document.querySelector('.last-modify')
 
 class Switch {
   constructor(switchMode) {
@@ -46,6 +48,22 @@ window.addEventListener('load', function () {
   );
 });
 
+const getDate = function () {
+  const date = new Date();
+  const option = {
+    year: "numeric",
+    month: "numeric",
+    day: "numeric",
+  };
+
+  const dateNYear = {
+    time: date.toTimeString(),
+    year: date.getFullYear(),
+    date: new Intl.DateTimeFormat("en-SA", option).format(date),
+  };
+
+  return dateNYear;
+};
 
 const toggleMenu = function () {
   nav.classList.toggle('show-nav')
@@ -89,8 +107,8 @@ nav.addEventListener("click", (e) => {
 
 nav.addEventListener('mouseover', hoverFadeInOut.bind(0.5))
 nav.addEventListener('mouseout', hoverFadeInOut.bind(1))
-
 menuBtn.addEventListener('click', toggleMenu);
-// cloneAndAppendLogos();
+theYear.textContent = `${getDate().year}`;
+lastModify.textContent = `${getDate().date} - ${getDate().time}`
 
 

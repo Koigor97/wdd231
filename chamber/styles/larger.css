@@ -3,6 +3,10 @@
         font-size: 62.5%;
     }
 
+    /* ----------------------------------------------------- */
+    /* ---------------------- HOMEPAGE PAGE SECTION --------------- */
+    /* ----------------------------------------------------- */
+
     header {
         min-height: 100vh;
         display: grid;
@@ -199,4 +203,29 @@
     }
 
 
+}
+
+@media only screen and (min-width: 118.75em) {
+
+    .news-event-section-box,
+    .service-card-box,
+    .partners {
+        max-width: 50vw;
+        margin: 0 auto;
+
+    }
+
+    .header-box {
+        max-width: 118rem;
+    }
+
+    .mini-gallery-box,
+    .explore-text-box {
+        max-width: 50em;
+    }
+
+    .explore {
+        justify-content: center;
+        gap: 7em;
+    }
 }

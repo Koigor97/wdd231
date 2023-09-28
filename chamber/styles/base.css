@@ -104,6 +104,10 @@ svg {
     width: 3rem;
 }
 
+/* ----------------------------------------------------- */
+/* ---------------------- HOME PAGE SECTION --------------- */
+/* ----------------------------------------------------- */
+
 .homepage-body h2 {
     font-family: var(--heading-font);
     text-transform: uppercase;
@@ -295,8 +299,9 @@ svg {
 
 .btn-join,
 .btn-explore {
-    border: none;
-    background-color: transparent;
+    display: grid;
+    place-content: center;
+    text-decoration: none;
     box-shadow: var(--box-shadow-effect);
     border-radius: .5rem;
     cursor: pointer;
@@ -639,6 +644,15 @@ address a:hover,
     display: flex;
     gap: 1rem;
 }
+
+/* ----------------------------------------------------- */
+/* ---------------------- DISCOVER PAGE SECTION --------------- */
+/* ----------------------------------------------------- */
+
+
+
+
+
 
 
 @media only screen and (min-width: 37.5em) {
