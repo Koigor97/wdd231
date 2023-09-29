@@ -3,7 +3,7 @@
 const hamButton = document.querySelector("#menu");
 const navigation = document.querySelector(".navigation");
 const theH2 = document.querySelector("h2");
-
+const pageVisit = document.querySelector(".page-visit");
 const date = document.getElementById("lastModified");
 const year = document.getElementById("year");
 
@@ -71,6 +71,20 @@ window.addEventListener('load', function () {
     }
   );
 });
+
+// 1️⃣ Initialize display element variable
+let numOfVisits = Number(JSON.parse(localStorage.getItem("numOfVisits-ls"))) || 0;
+
+// 3️⃣ Determine if this is the first visit or display the number of visits. We wrote this example backwards in order for you to think deeply about the logic.
+if (numOfVisits !== 0) {
+	pageVisit.textContent = `Current number of visit to the page is: ${numOfVisits} 🫡`;
+} else {
+	pageVisit.textContent = `This is your first visit. 🥳 Welcome!`;
+}
+//increment the number of visits by one.
+numOfVisits++;
+//store the new visit total into localStorage, key=numOfVisits-ls
+localStorage.setItem("numOfVisits-ls", JSON.stringify(numOfVisits));
 
 year.textContent = getDate().year;
 date.textContent = `${getDate().date} ${getDate().time}`;
