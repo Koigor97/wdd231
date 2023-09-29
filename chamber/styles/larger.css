@@ -126,8 +126,6 @@
         grid-template-rows: min-content max-content max-content;
         place-items: center;
         gap: 2em;
-
-
         padding-block-end: 3em;
 
     }
@@ -220,7 +218,39 @@
         align-self: center;
     }
 
+    .info-section-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
 
+    }
+
+    .sidebar-box {
+        grid-column: 1 / 3;
+        grid-row: 1 / 3;
+        height: min-content;
+        grid-template-columns: 1fr; 
+        justify-items: center;
+        padding-block: 3em;
+    }
+
+    .map-box {
+        grid-column: 3 / 6;
+        grid-row: 1 / 2;
+    }
+
+    .explore-photos-box {
+        grid-column: 3 / 6;
+        grid-row: 2 / 3 
+    }
+
+    .explore-photos-box picture {
+        width: 70%;
+        box-shadow: var(----box-shadow-all-4sides);
+    }
+
+    .sidebar-info {
+        width: 80%;
+    }
 }
 
 @media only screen and (min-width: 118.75em) {

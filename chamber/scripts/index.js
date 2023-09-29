@@ -67,8 +67,6 @@ const getDate = function () {
 
 const toggleMenu = function () {
   nav.classList.toggle('show-nav')
-  
-  parentBox.appendChild(cloneVersion);
 }
 
 
