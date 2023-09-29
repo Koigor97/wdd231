@@ -8,11 +8,15 @@
     /* ----------------------------------------------------- */
 
     header {
-        min-height: 100vh;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 60px 1fr;
         place-items: center;
+        
+    }
+
+    .homepage-body header {
+        min-height: 100vh;
+        grid-template-rows: 60px 1fr;
         gap: 3.0rem;
         padding-inline: 2rem;
         padding-block-end: 2rem;
@@ -94,12 +98,12 @@
         transform: scale(1);
     }
 
-    figure {
+    .figure-box {
         transition: all .2s;
-        gap: 2rem;
+        /* gap: 2rem; */
     }
 
-    figure:hover {
+    .figure-box:hover {
         transform: translateY(-10px);
     }
 
@@ -200,6 +204,20 @@
 
     .footer-social-links:hover svg {
         fill: var(--optional-color);
+    }
+
+    /* ----------------------------------------------------- */
+/* ---------------------- DISCOVER PAGE SECTION --------------- */
+/* ----------------------------------------------------- */
+    .discover-page-body header {
+        padding-inline: 2rem;
+  
+    }
+
+    .discover-page-body nav {
+        grid-column: 3 / 5;
+        justify-self:self-end;
+        align-self: center;
     }
 
 
