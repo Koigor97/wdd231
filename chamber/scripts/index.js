@@ -4,6 +4,7 @@ const nav = document.querySelector('.header-nav');
 const menuBtn = document.querySelector('.menu-btn');
 const theYear = document.querySelector('#year');
 const lastModify = document.querySelector('.last-modify')
+const messageBox =  document.querySelector('.message-box');
 
 class Switch {
   constructor(switchMode) {
@@ -69,7 +70,6 @@ const toggleMenu = function () {
   nav.classList.toggle('show-nav')
 }
 
-
 const hoverFadeInOut = function (e) {
   if (e.target.classList.contains('nav-links')) {
     const theNav = e.target;
@@ -101,6 +101,21 @@ nav.addEventListener("click", (e) => {
   }
 
 });
+
+
+const welcomeMsg = `<h1>Welcome! Let us know if you have any questions.</h1>`;
+const welcomeBack = `<h1>Back so soon! Awesome!</h1>`
+
+let lastVisit = Number(JSON.parse(localStorage.getItem("numOfVisits"))) || 0;
+
+if (lastVisit !== 0) {
+  const currentTime = new Date().getTime();
+  console.log(currentTime);
+
+}
+else {
+  messageBox.innerHTML = welcomeMsg;
+}
 
 
 nav.addEventListener('mouseover', hoverFadeInOut.bind(0.5))
