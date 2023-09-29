@@ -9,11 +9,10 @@
     font-size: var(--fluid-text-3);
   }
 
-  header,
   nav,
-  main,
-  footer {
-    max-width: 150rem;
+  main {
+    max-width: 180rem;
+    margin: 0 auto;
   }
 
   nav {
@@ -31,15 +30,9 @@
     width: 100%;
   }
 
-  main {
-    height: 100em;
+  .info-box {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 80px 2fr 1fr;
-  }
 
-  figure {
-    grid-column: 1 / 4;
-    grid-row: 1 / 2;
   }
 
   figcaption {
@@ -48,19 +41,14 @@
 
   main h2 {
     text-align: left;
-    align-self: center;
-    grid-row: 2 / 3;
-    grid-column: 1 / 4;
   }
 
   .activity-sec {
-    grid-row: 3 / 4;
     grid-column: 1/ 3;
   }
 
   .weather-sec {
-    grid-row: 3 / 4;
-    grid-row: 3 / 4;
+    grid-column: 3 / 4;
   }
 
   .map {
@@ -81,10 +69,6 @@
 
   .navigation li {
     display: block;
-  }
-
-  footer {
-    align-self: self-end;
   }
 
 }
