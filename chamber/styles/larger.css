@@ -248,8 +248,28 @@
         box-shadow: var(----box-shadow-all-4sides);
     }
 
-    .sidebar-info {
+    .sidebar-info,
+    .calender {
         width: 80%;
+    }
+
+    .calender .header .btns svg {
+        transition: all .2s;
+    }
+
+    .calender .header .btns svg:hover {
+        transform: scale(1.1);
+        fill: var(--primary-color);
+        stroke: none;
+    }
+
+    .days .day {
+        transition: all .2s;
+    }
+
+    .days .day:not(.prev):not(.next):hover {
+        transform: scale(1.05);
+        background-color: var(--secondary-color);
     }
 }
 
