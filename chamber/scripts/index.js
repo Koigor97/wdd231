@@ -102,20 +102,37 @@ nav.addEventListener("click", (e) => {
 
 });
 
-
 const welcomeMsg = `<h1>Welcome! Let us know if you have any questions.</h1>`;
 const welcomeBack = `<h1>Back so soon! Awesome!</h1>`
 
-let lastVisit = Number(JSON.parse(localStorage.getItem("numOfVisits"))) || 0;
+// const aWholeDay = 84600000; //(1000 * 60 * 60 * 24);
+// const today = new Date();
+// console.log(today.getTime());
+// console.log(Date.now());
+// const day = Math.floor(today.getTime() - 8) / (1000 * 60 * 60 * 24);
+// console.log(day);
+// console.log(new Date(day).getFullYear());
 
-if (lastVisit !== 0) {
-  const currentTime = new Date().getTime();
-  console.log(currentTime);
 
-}
-else {
-  messageBox.innerHTML = welcomeMsg;
-}
+// let lastVisit = Number(JSON.parse(localStorage.getItem("numOfVisits"))) || 1;
+
+// if (lastVisit !== 0) {
+//   const currentTime = new Date().getTime();
+//   // console.log(currentTime);
+//   const theDifference = currentTime - lastVisit;
+//   const daysGoneBy = (theDifference / aWholeDay);
+  
+
+//   if(daysGoneBy < 1) {
+//     messageBox.innerHTML = welcomeBack;
+//     lastVisit++
+//   } else {
+//     messageBox.innerHTML = `<h1>You last visited ${daysGoneBy.toFixed(0)}</h1>`
+//   }
+// }
+// else {
+//   messageBox.innerHTML = welcomeMsg;
+// }
 
 
 nav.addEventListener('mouseover', hoverFadeInOut.bind(0.5))
