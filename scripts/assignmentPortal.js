@@ -73,7 +73,7 @@ window.addEventListener('load', function () {
 });
 
 // 1️⃣ Initialize display element variable
-let numOfVisits = Number(JSON.parse(localStorage.getItem("numOfVisits-ls"))) || 0;
+let numOfVisits = Number(JSON.parse(localStorage.getItem("numOfVisits-timestamp"))) || 0;
 
 // 3️⃣ Determine if this is the first visit or display the number of visits. We wrote this example backwards in order for you to think deeply about the logic.
 if (numOfVisits !== 0) {

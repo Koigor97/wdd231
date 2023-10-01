@@ -4,7 +4,7 @@ const nav = document.querySelector('.header-nav');
 const menuBtn = document.querySelector('.menu-btn');
 const theYear = document.querySelector('#year');
 const lastModify = document.querySelector('.last-modify')
-const messageBox =  document.querySelector('.message-box');
+const messageBox = document.querySelector('.message-box');
 const daysContainer = document.querySelector(".days");
 const nextMonthBtn = document.querySelector(".next-btn");
 const prevMonthBtn = document.querySelector(".prev-btn");
@@ -24,7 +24,7 @@ const months = [
   "October",
   "November",
   "December",
-] 
+]
 
 const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 
@@ -136,27 +136,22 @@ function renderCalender() {
   // getting the previous, current and next month days
   date.setDate(1);
   const firstDay = new Date(currentYear, currentMonth, 1);
-  console.log(firstDay.getDay());
-  const lastDay =  new Date(currentYear, currentMonth + 1, 0);
-  console.log(lastDay);
+  const lastDay = new Date(currentYear, currentMonth + 1, 0);
   const lastDayIndex = lastDay.getDay();
-  console.log(lastDayIndex);
   const lastDayDate = lastDay.getDate();
-  console.log(lastDayDate);
   const prevLastDay = new Date(currentYear, currentMonth, 0);
-  console.log(prevLastDay);
   const prevLastDayDate = prevLastDay.getDate();
-  console.log(prevLastDayDate);
   const nextDays = (7 - lastDayIndex) - 1;
-  console.log(nextDays);
 
   // updating the current year and month in header
   month.innerHTML = `${months[currentMonth]} ${currentYear}`;
+
   // updating the days 
   let days = '';
+
   // updating previous days 
   for (let x = firstDay.getDay(); x > 0; x--) {
-    days +=`<div class="day prev">${prevLastDayDate - x + 1}</div>`;  
+    days += `<div class="day prev">${prevLastDayDate - x + 1}</div>`;
   }
 
   // current month days
@@ -178,7 +173,6 @@ function renderCalender() {
 
   hideTodayBtn();
   daysContainer.innerHTML = days;
-
 }
 renderCalender();
 
@@ -194,18 +188,14 @@ nextMonthBtn.addEventListener('click', () => {
   renderCalender();
 })
 
-prevMonthBtn.addEventListener("click", ()=> {
+prevMonthBtn.addEventListener("click", () => {
   // decrease by one
   currentMonth--;
   // checking if it's less than 0 set it to 11 and decrease year
   if (currentMonth < 0) {
     currentMonth = 11;
     currentYear--;
-
-    // render calendar
-    renderCalender();
   }
-
   // render calendar
   renderCalender();
 });
@@ -213,9 +203,8 @@ prevMonthBtn.addEventListener("click", ()=> {
 // go to today
 todayBtn.addEventListener('click', () => {
   // set the month and year to current
-  currentMonth =  date.getMonth();
+  currentMonth = date.getMonth();
   currentYear = date.getFullYear();
-
   // render calendar
   renderCalender();
 });
@@ -229,38 +218,38 @@ function hideTodayBtn() {
   }
 }
 
-const welcomeMsg = `<h1>Welcome! Let us know if you have any questions.</h1>`;
-const welcomeBack = `<h1>Back so soon! Awesome!</h1>`
+function feedbackMessage() {
+  const welcomeMsg = `<h1>Welcome! Let us know if you have any questions.</h1>`;
+  const welcomeBack = `<h1>Back so soon! Awesome!</h1>`
+  const sinceLastVist = `<h1>You last visited [n] days ago</h1>`;
 
-// const aWholeDay = 84600000; //(1000 * 60 * 60 * 24);
-// const today = new Date();
-// console.log(today.getTime());
-// console.log(Date.now());
-// const day = Math.floor(today.getTime() - 8) / (1000 * 60 * 60 * 24);
-// console.log(day);
-// console.log(new Date(day).getFullYear());
+  // number of milliseconds in a day
+  const millisecToDay = (1000 * 60 * 60 * 24);
+
+  // checking if previous visit timestamp exist in local storage
+  let lastVisit = Number(JSON.parse(localStorage.getItem("visitTimeStamp")));
+  // getting today's date in milliseconds
+  const currentTime = Date.now();
+
+  if (lastVisit) {
+    // calculating the days past since the last visit 
+
+    const daysPast = Math.abs(Math.trunc((currentTime - lastVisit) / millisecToDay));
+    console.log(daysPast);
+    // give user feedback based on the days past
+   if (daysPast === 0) {
+      messageBox.innerHTML = welcomeBack;
+    } else {
+      messageBox.innerHTML = sinceLastVist.replace('[n]', daysPast);
+    }
+  } else {
+    messageBox.innerHTML = welcomeMsg;
+  }
 
 
-// let lastVisit = Number(JSON.parse(localStorage.getItem("numOfVisits"))) || 1;
-
-// if (lastVisit !== 0) {
-//   const currentTime = new Date().getTime();
-//   // console.log(currentTime);
-//   const theDifference = currentTime - lastVisit;
-//   const daysGoneBy = (theDifference / aWholeDay);
-  
-
-//   if(daysGoneBy < 1) {
-//     messageBox.innerHTML = welcomeBack;
-//     lastVisit++
-//   } else {
-//     messageBox.innerHTML = `<h1>You last visited ${daysGoneBy.toFixed(0)}</h1>`
-//   }
-// }
-// else {
-//   messageBox.innerHTML = welcomeMsg;
-// }
-
+  localStorage.setItem('visitTimeStamp', JSON.stringify(currentTime))
+}
+feedbackMessage();
 
 nav.addEventListener('mouseover', hoverFadeInOut.bind(0.5))
 nav.addEventListener('mouseout', hoverFadeInOut.bind(1))
@@ -269,3 +258,17 @@ theYear.textContent = `${getDate().year}`;
 lastModify.textContent = `${getDate().date} - ${getDate().time}`
 
 
+const dayAfter2mrr = new Date(currentYear, currentMonth - 1, 5);
+// let theday = new Date(dayAfter2mrr);
+// console.log(theday);
+const now = Date.now();
+
+const compute = Math.abs(Math.trunc((dayAfter2mrr.getTime() - now) / (1000 * 60 * 60 * 24)));
+if (compute === 0) {
+  console.log(welcomeBack);
+} else {
+  console.log(Math.abs(Math.trunc(compute)));
+}
+// const checkDate = 
+
+console.log(dayAfter2mrr, now);

@@ -683,7 +683,7 @@ address a:hover,
     width: 80%;
     padding-inline: 2em;
     padding-block: 1em;
-    border-radius: 10px;
+    border-radius: 1rem;
     box-shadow: var(--box-shadow-all-4sides);
 
     display: grid;
@@ -735,30 +735,31 @@ address a:hover,
 }
 
 .calender {
-  width: 80%;
-  max-width: 600px;
-  padding-block: 3rem;
-  padding-inline: 2rem;
-  border-radius: 1rem;
-  background-color: var(--bg-color);
+    width: 80%;
+    max-width: 600px;
+    padding-block: 3rem;
+    padding-inline: 2rem;
+    border-radius: 1rem;
+    background-color: var(--bg-color);
 }
 
 .calender :where(.header, .the-date, .calender .btns) {
     display: flex;
 }
+
 .calender .header {
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 2rem;
-  padding-bottom: 2rem;
-  border-bottom: 2px solid #ccc;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #ccc;
 }
 
 .calender .header .the-date {
-  align-items: center;
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: var(--calnder-text-color);
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--calnder-text-color);
 }
 
 .calender .header .btns {
@@ -839,6 +840,7 @@ iframe {
 .explore-photos-box picture {
     width: 80%;
     justify-self: center;
+    box-shadow: var(--box-shadow-all-4sides);
 }
 
 .explore-photos-box img {
@@ -970,7 +972,7 @@ iframe {
         padding-inline: 1em;
     }
 
-    .sidebar-info, 
+    .sidebar-info,
     .calender {
         width: 100%;
         height: 100%;

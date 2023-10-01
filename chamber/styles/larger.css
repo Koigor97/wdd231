@@ -245,7 +245,6 @@
 
     .explore-photos-box picture {
         width: 70%;
-        box-shadow: var(----box-shadow-all-4sides);
     }
 
     .sidebar-info,
