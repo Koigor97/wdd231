@@ -663,9 +663,10 @@ address a:hover,
     display: none;
 }
 
-.message-box h1 {
+.message-box {
     text-decoration: none;
     color: var(--default-color);
+    font-size: 2.5rem;
 }
 
 .sidebar-box {

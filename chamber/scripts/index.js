@@ -219,9 +219,9 @@ function hideTodayBtn() {
 }
 
 function feedbackMessage() {
-  const welcomeMsg = `<h1>Welcome! Let us know if you have any questions.</h1>`;
-  const welcomeBack = `<h1>Back so soon! Awesome!</h1>`
-  const sinceLastVist = `<h1>You last visited [n] days ago</h1>`;
+  const welcomeMsg = `<p>Welcome! Let us know if you have any questions.</p>`;
+  const welcomeBack = `<p>Back so soon! Awesome!</p>`
+  const sinceLastVist = `<p>You last visited [n] days ago</p>`;
 
   // number of milliseconds in a day
   const millisecToDay = (1000 * 60 * 60 * 24);
