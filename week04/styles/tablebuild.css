@@ -1,0 +1,75 @@
+:root {
+    --table-head1-bg: #00113e;
+    --table-head2-bg: #f90a39;
+    --box-shadow-all-4sides-cleaner: 0 0 2rem -5px rgba(0, 0, 0, 0.18);
+    --border-line: 2px solid #98989896;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eef0f4;
+}
+
+main {
+    height: 100dvh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    box-shadow: var(--box-shadow-all-4sides-cleaner);
+    border-collapse: collapse;
+    text-align: center;
+}
+
+ 
+thead tr :where([scope="colgroup"], [scope="col"]) {
+    padding-block: 1em;
+    padding-inline: 1em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+thead :first-child,
+thead :last-child:nth-child(1) {
+    background-color: var(--table-head1-bg);
+    color: #eef0f4;
+}
+
+thead :last-child:not(:nth-child(1)) {
+    background-color: var(--table-head2-bg);
+    color:#eef0f4;
+}
+
+tbody tr > td {
+    padding-block: .5em;
+    padding-inline: 1em;
+    font-family: Verdana, sans-serif;
+    font-weight: bolder;
+}
+
+thead :where(:first-child th, :last-child th),
+tbody tr > td {
+    border-left: var(--border-line);
+}
+
+table tr {
+    border-bottom: var(--border-line);
+    border-right: var(--border-line);
+}
+
+tbody tr:nth-child(even) {
+    background-color: #d68b4575;
+}
+
+@media only screen and (min-width: 37.5em) {
+    table {
+        max-width: 60rem;
+        width: 45rem;
+    }
+}
