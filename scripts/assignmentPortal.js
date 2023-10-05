@@ -6,6 +6,22 @@ const theH2 = document.querySelector("h2");
 const pageVisit = document.querySelector(".page-visit");
 const date = document.getElementById("lastModified");
 const year = document.getElementById("year");
+const isPasswdSameMsg = document.querySelector(".is-passwd-same");
+const passwd = document.getElementById('password');
+const confirmPasswd = document.getElementById('confirm-passwd');
+
+const isPasswdConfirmed =  function() {
+  if (passwd.value !== confirmPasswd.value) {
+    const feedback = `❗️WRONG PASSWORD`
+    isPasswdSameMsg.textContent = feedback;
+    confirmPasswd.classList.add("notsame");
+  } else {
+    isPasswdSameMsg.textContent = "";
+    confirmPasswd.classList.remove("notsame");
+  }
+}
+
+confirmPasswd.addEventListener('focusout', isPasswdConfirmed);
 
 hamButton.addEventListener("click", () => {
   navigation.classList.toggle("open");
