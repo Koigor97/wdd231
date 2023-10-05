@@ -1,0 +1,76 @@
+:root {
+    --font-color: #555;
+    --input-border-color: #999;
+    --invalid-color: red;
+    --valid-color: limegreen;
+}
+
+form {
+    background-color: var(--section-bg);
+    backdrop-filter: blur(1.5rem);
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+    padding-block: 1em;
+    padding-inline: 1em;
+}
+
+form label {
+    display: block;
+    padding-block-start: 2rem;
+}
+
+form label input {
+    color: var(--font-color);
+    display: block;
+    padding: .75rem;
+    width: 100%;
+    max-width: 40rem;
+    border: solid 1px var(--input-border-color);
+    border-radius: .5rem;
+}
+
+form label input:required:not([type="range"]) {
+    border-left: .5rem solid var(--invalid-color);
+}
+
+form label input:required:valid:not([type="range"]) {
+    border-left: .5rem solid var(--valid-color);
+}
+
+input[type="submit"] {
+    border: none;
+    background-color: maroon;
+    color: white;
+    padding-block: .75rem;
+    padding-inline: 1rem;
+    margin-block-start: 3.5rem;
+    border-radius: .5rem;
+}
+
+#page-rating  {
+    color: white;
+}
+
+#rating-values {
+    display: flex;
+    width: 100%;
+    max-width: 30rem;
+    margin-inline-start: 1.5rem;
+}
+
+#rating-values option{
+    flex: 1 1 auto;
+}
+
+form label input.notsame:required {
+    background-color: rgba(248, 153, 118, 0.723);
+    border-left: .5rem solid var(--invalid-color);
+}
+
+
+@media only screen and (min-width: 32.5em) {
+    form {
+        max-width: 50vw;
+        margin: 0 auto;
+    }
+}
