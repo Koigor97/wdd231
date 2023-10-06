@@ -213,7 +213,8 @@
     }
 
     .discover-page-body nav,
-    .join-page-body nav {
+    .join-page-body nav,
+    .thankyou-page-body nav {
         grid-column: 3 / 5;
         justify-self:self-end;
         align-self: center;
@@ -287,8 +288,34 @@
         /* ----------------------------------------------------- */
 /* ---------------------- JOIN PAGE SECTION --------------- */
 /* ----------------------------------------------------- */
+    .form-container {
+        justify-content: space-evenly;
+    }
+    .form-container .svg-box {
+        width: 35%;
+    }
 
-    
+    .form-container form input[type="submit"]:hover {
+        background-color: var(--default-color);
+        color: var(--primary-color);
+    }
+
+    .form-container form input[type="submit"]:active {
+        box-shadow: none;
+    }
+
+    .join-page-body .join-cta-text {
+        width: 70vw;
+        margin: 0 auto 3em;
+    }
+
+    .thankyou-page-body section p,
+    .thankyou-page-body section h1 {
+        width: 60vw;
+        max-width: 70vw;
+        margin: 1em auto;
+    }
+
 }
 
 @media only screen and (min-width: 118.75em) {
