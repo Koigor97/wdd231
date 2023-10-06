@@ -207,12 +207,13 @@
     /* ----------------------------------------------------- */
 /* ---------------------- DISCOVER PAGE SECTION --------------- */
 /* ----------------------------------------------------- */
-    .discover-page-body header {
+    .discover-page-body header,
+    .join-page-body header {
         padding-inline: 2rem;
-  
     }
 
-    .discover-page-body nav {
+    .discover-page-body nav,
+    .join-page-body nav {
         grid-column: 3 / 5;
         justify-self:self-end;
         align-self: center;
@@ -281,6 +282,13 @@
         transform: scale(1.05);
         background-color: var(--secondary-color);
     }
+
+
+        /* ----------------------------------------------------- */
+/* ---------------------- JOIN PAGE SECTION --------------- */
+/* ----------------------------------------------------- */
+
+    
 }
 
 @media only screen and (min-width: 118.75em) {

@@ -25,8 +25,11 @@
     --box-shadow-effect: 8px 8px 8px -6px rgba(0, 0, 0, 0.18);
     --box-shadow-all-4sides: 0 0 2rem rgba(0, 0, 0, 0.18);
     --box-shadow-all-4sides-cleaner: 0 0 2rem -5px rgba(0, 0, 0, 0.18);
+
     --default-gap: 2em;
     --default-gap: 1em;
+
+    --input-border: #8b8a8b;
     /* change the values below to your chosen font(s) */
     --heading-font: "IBM Plex Sans Condensed", sans-serif;
     --paragraph-font: "Poppins", sans-serif;
@@ -853,6 +856,98 @@ iframe {
 
 .discover-page-body footer {
     background-color: var(--optional-color);
+}
+
+
+       /* ----------------------------------------------------- */
+/* ---------------------- JOIN PAGE SECTION --------------- */
+/* ----------------------------------------------------- */
+
+.join-page-body section {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.form-container {
+    width: 50%;
+}
+
+.form-container .svg-box img {
+    width: 100%;
+}
+
+form {
+    background: var(--secondary-color);
+    backdrop-filter: var(--blur-effect);
+    width: 90vw;
+    padding: .75em 1em;
+    border-radius: .5rem;
+}
+
+form label.top {
+    display: block;
+    margin-block-start: 2.5rem;
+}
+
+form div,
+.side-by-side {
+    display: block;
+}
+
+form div {
+    margin-block-start: 2.5rem;
+    /* margin-block-end: .5rem; */
+}
+
+.side-by-side {
+    padding-block-start: 1rem;
+}
+
+.asterisk {
+    color: var(--optional2-color);
+}
+
+form input:not([type="radio"]) {
+    width: 100%;
+    max-width: 35rem;
+    height: 4.4rem;
+}
+
+form label.top input:required {
+    outline: 1px solid var(--optional2-color);
+}
+
+form label.top input:required:valid {
+    outline-color: lime;
+}
+
+textarea {
+    resize: vertical;
+    width: 100%;
+    max-width: 35rem;
+}
+
+form input:not([type="radio"]),
+form textarea {
+    display: block;
+    color: #555;
+    font-size: max(1.8rem, 1em);
+    padding: 0.25em 0.5em;
+    border: 2px solid var(--input-border);
+    border-radius: 4px;
+}
+
+form input:not(textarea) {
+    line-height: 1;
+}
+
+form input:focus:not([type="radio"]),
+form textarea:focus {
+    border-color: var(--tertiary-color);
+    box-shadow: 0 0 0 3px hsla(245, 100%, calc(42% + 40%), 0.8);
+    outline: 3px solid transparent;
+    transition: 180ms box-shadow ease-in-out;
 }
 
 
