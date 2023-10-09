@@ -1,0 +1,28 @@
+{
+    "family-name": "Fogbawa",
+    "dateMoveToWard": "Nov-04-2022",
+    "numberOfPeopleInFamily": 5,
+    "visitedByBishopric": true,
+    "familyMembers": [
+        {
+            "name": "Sarah",
+            "gender": "Female",
+            "dateOfBirth": "Jan-29-1997"
+        },
+        {
+            "name": "Koigor",
+            "gender": "Male",
+            "dateOfBirth": "Dec-03-1997"
+        },
+        {
+            "name": "Koirah",
+            "gender": "Female",
+            "dateOfBirth": "Jul-16-2020"
+        },
+        {
+            "name": "Koigor jr",
+            "gender":"Male",
+            "dateOfBirth": "Nov-23-2018"
+        }
+    ]
+}
