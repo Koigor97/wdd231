@@ -9,6 +9,40 @@ const year = document.getElementById("year");
 const isPasswdSameMsg = document.querySelector(".is-passwd-same");
 const passwd = document.getElementById('password');
 const confirmPasswd = document.getElementById('confirm-passwd');
+const weatherBox = document.querySelector('.weather-box');
+const weatherIcon = document.querySelector('.weather-icon');
+
+const lat = -25.74804;
+const long = 28.23708;
+const apiKey = 'f4619f75c2d45cc1bfe1a55992e82aaa';
+
+const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=imperial`;
+
+const apiFetch = async function() {
+  try {
+    const response = await fetch(url);
+    if (response.ok) {
+      const data = await response.json();
+      // console.log(data); 
+      displayResults(data)
+    } else {
+        throw Error(await response.text());
+    }
+  } catch (error) {
+      console.log(error);
+  }
+}
+
+function displayResults(data) {
+  const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+  let desc = data.weather[0].description;
+  weatherIcon.setAttribute('src', iconsrc);
+  weatherIcon.setAttribute('alt', 'weather-icon');
+  const msgForcast = `${data.main.temp}&deg;F - ${desc}`;
+  weatherBox.innerHTML = msgForcast;
+}
+
+apiFetch();
 
 const isPasswdConfirmed =  function() {
   if (passwd.value !== confirmPasswd.value) {
