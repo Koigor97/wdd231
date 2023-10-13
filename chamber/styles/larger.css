@@ -201,20 +201,22 @@
     }
 
     .footer-social-links:hover svg {
-        fill: var(--optional-color);
+        fill: var(--default-color);
     }
 
     /* ----------------------------------------------------- */
 /* ---------------------- DISCOVER PAGE SECTION --------------- */
 /* ----------------------------------------------------- */
     .discover-page-body header,
-    .join-page-body header {
+    .join-page-body header,
+    .directory-page-body header {
         padding-inline: 2rem;
     }
 
     .discover-page-body nav,
     .join-page-body nav,
-    .thankyou-page-body nav {
+    .thankyou-page-body nav,
+    .directory-page-body nav {
         grid-column: 3 / 5;
         justify-self:self-end;
         align-self: center;
@@ -317,6 +319,12 @@
     }
 
 }
+
+
+        /* ----------------------------------------------------- */
+/* ---------------------- JOIN PAGE SECTION --------------- */
+/* ----------------------------------------------------- */
+
 
 @media only screen and (min-width: 118.75em) {
 
