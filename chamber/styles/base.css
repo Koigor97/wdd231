@@ -1040,6 +1040,175 @@ iframe {
 }
 
 
+        /* ----------------------------------------------------- */
+/* ---------------------- DIRECTORY PAGE SECTION --------------- */
+/* ----------------------------------------------------- */
+
+.intro-section {
+    text-align: center;
+}
+
+.search-section {
+    margin-block: 1em;
+    background-color: var(--primary-color);
+    color: var(--default-color);
+    padding-block: 1em;
+    padding-inline: 1em;
+
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 1rem;
+}
+
+.search-section label {
+    width: 100%;
+}
+
+.search-section input {
+    width: 70%;
+    height: 4rem;
+    padding-inline: 1rem;
+    border-radius: 5rem;
+    margin-inline-start: 1rem;
+}
+
+.search-section input:focus {
+    outline-color: lime;
+}
+
+.search-section button {
+    padding-block: .5em;
+    padding-inline: 1em;
+    border: none;
+    background: transparent;
+    background-color: var(--secondary-color);
+    border-radius: 5rem;
+    box-shadow: var(--box-shadow-all-4sides);
+}
+
+.search-section button:active {
+    background-color: var(--secondary-shade-2);
+}
+
+.views-button-section {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.views-button-section button {
+    padding-block: .5em;
+    padding-inline: 1em;
+    background: transparent;
+    box-shadow: var(--box-shadow-effect);
+}
+
+.views-button-section button:active {
+    border-color: lime;
+    outline: 2px dotted lime;
+    outline-offset: .2em;
+}
+
+.views-button-section #grid-view {
+    background-color: var(--optional-color);
+}
+
+.views-button-section #list-view {
+    background-color: var(--primary-color);
+    color: var(--default-color);
+}
+
+.member-card-section {
+    background-color: #eef0f4;
+    background-image: url("data:image/svg+xml,%3Csvg width='70' height='70' viewBox='0 0 70 70' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23d68c45' fill-opacity='0.33' fill-rule='evenodd'%3E%3Cpath d='M0 0h35v35H0V0zm5 5h25v25H5V5zm5 5h15v15H10V10zm5 5h5v5h-5v-5zM40 5h25v25H40V5zm5 5h15v15H45V10zm5 5h5v5h-5v-5zM70 35H35v35h35V35zm-5 5H40v25h25V40zm-5 5H45v15h15V45zm-5 5h-5v5h5v-5zM30 40H5v25h25V40zm-5 5H10v15h15V45zm-5 5h-5v5h5v-5z'/%3E%3C/g%3E%3C/svg%3E");
+
+    margin-block: 1em;
+    padding-block: 1.5em;
+    padding-inline: 1em;
+}
+
+.member-card {
+    /* width: 50%; */
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-block: 1em;
+    padding-inline: 1em;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow-all-4sides-cleaner);
+}
+
+.member-card figure div {
+    width: 60%;
+}
+
+.member-card figure img{
+    width: 100%;
+    height: auto;
+}
+
+.member-card figure div,
+.member-card .member-info-box img {
+    margin: 0 auto;
+}
+
+.member-card figure figcaption {
+    font-family: var(--heading-font);
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.member-card .member-info-box {
+    display: grid;
+    gap: 1rem;
+}
+
+.member-card .member-info-box a ,
+.member-card .member-info-box img {
+    display: block;
+}
+
+.member-card .member-info-box a {
+    color: var(--optional-color);
+}
+
+.member-card .member-info-box a:active,
+.member-card .member-info-box a:visited {
+    color: var(--primary-color);
+}
+
+/* .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+} */
+
+.list {
+    padding: 0;
+}
+
+.list .member-card:nth-child(even) {
+    background-color: var(--tertiary-color);
+}
+
+.list .member-card{
+    text-align: left;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.list .member-card figure div {
+    display: none;
+}
+
+.list .member-card .member-info-box img {
+    margin: 0;
+}
+
+
 @media only screen and (min-width: 37.5em) {
     .logo-box {
         width: 15rem;
