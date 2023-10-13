@@ -859,7 +859,13 @@ iframe {
 }
 
 
-.discover-page-body footer {
+.discover-page-body footer,
+.join-page-body header,
+.join-page-body footer,
+.thankyou-page-body header,
+.thankyou-page-body footer,
+.directory-page-body header,
+.directory-page-body footer {
     background-color: var(--optional-color);
 }
 
@@ -867,12 +873,6 @@ iframe {
        /* ----------------------------------------------------- */
 /* ---------------------- JOIN PAGE SECTION --------------- */
 /* ----------------------------------------------------- */
-.join-page-body header,
-.join-page-body footer,
-.thankyou-page-body header,
-.thankyou-page-body footer {
-    background-color: var(--optional-color);
-}
 
 .join-page-body section,
 .thankyou-page-body {
