@@ -9,6 +9,8 @@ const daysContainer = document.querySelector(".days");
 const nextMonthBtn = document.querySelector(".next-btn");
 const prevMonthBtn = document.querySelector(".prev-btn");
 const month = document.querySelector(".the-date");
+messageBox.innerHTML = `Testing`;
+month.innerHTML = `Testing`;
 const todayBtn = document.querySelector('.today');
 const memberCardBox = document.querySelector('.member-card-section');
 const gridBtn = document.getElementById('grid-view');
@@ -79,11 +81,9 @@ const membersUrl = '../data/members.json';
 const getMembersData = async function() {
   const response = await fetch(membersUrl);
   const data = await response.json();
-  // console.log(data);
+  console.log(data);
   renderMembers(data.data);
 }
-
-getMembersData();
 
 const renderMembers = function(members) {
   members.forEach((member) => {
@@ -132,9 +132,7 @@ const theView  = function() {
   }
 }
 
-gridBtn.addEventListener('click', changeView.bind(gridBtn));
-listBtn.addEventListener('click', changeView.bind(listBtn));
-theView();
+
 
 const getDate = function () {
   const date = new Date();
@@ -195,22 +193,30 @@ const date = new Date();
 let currentMonth = date.getMonth();
 // getting the current year
 let currentYear = date.getFullYear();
+console.log(date, currentMonth, currentYear);
 
 // function for rendering the days
 function renderCalender() {
   // getting the previous, current and next month days
   date.setDate(1);
   const firstDay = new Date(currentYear, currentMonth, 1);
+  console.log(firstDay);
   const lastDay = new Date(currentYear, currentMonth + 1, 0);
+  console.log(lastDay);
   const lastDayIndex = lastDay.getDay();
+  console.log(lastDayIndex);
   const lastDayDate = lastDay.getDate();
+  console.log(lastDayDate);
   const prevLastDay = new Date(currentYear, currentMonth, 0);
+  console.log(prevLastDay);
   const prevLastDayDate = prevLastDay.getDate();
+  console.log(prevLastDayDate);
   const nextDays = (7 - lastDayIndex) - 1;
+  console.log(nextDays);
 
   // updating the current year and month in header
   month.innerHTML = `${months[currentMonth]} ${currentYear}`;
-
+  console.log(`${months[currentMonth]} ${currentYear}`);
   // updating the days 
   let days = '';
 
@@ -239,40 +245,6 @@ function renderCalender() {
   hideTodayBtn();
   daysContainer.innerHTML = days;
 }
-renderCalender();
-
-nextMonthBtn.addEventListener('click', () => {
-  // increase the current month by one
-  currentMonth++
-  if (currentMonth > 11) {
-    // if current month is greater 11, set it zero and increase year by one
-    currentMonth = 0;
-    currentYear++
-  }
-  // render calendar
-  renderCalender();
-})
-
-prevMonthBtn.addEventListener("click", () => {
-  // decrease by one
-  currentMonth--;
-  // checking if it's less than 0 set it to 11 and decrease year
-  if (currentMonth < 0) {
-    currentMonth = 11;
-    currentYear--;
-  }
-  // render calendar
-  renderCalender();
-});
-
-// go to today
-todayBtn.addEventListener('click', () => {
-  // set the month and year to current
-  currentMonth = date.getMonth();
-  currentYear = date.getFullYear();
-  // render calendar
-  renderCalender();
-});
 
 // hiding today button if it's already the current date
 function hideTodayBtn() {
@@ -311,29 +283,52 @@ function feedbackMessage() {
     messageBox.innerHTML = welcomeMsg;
   }
 
-
   localStorage.setItem('visitTimeStamp', JSON.stringify(currentTime))
 }
-feedbackMessage();
+
+nextMonthBtn.addEventListener('click', () => {
+  // increase the current month by one
+  currentMonth++
+  if (currentMonth > 11) {
+    // if current month is greater 11, set it zero and increase year by one
+    currentMonth = 0;
+    currentYear++
+  }
+  // render calendar
+  renderCalender();
+});
+
+prevMonthBtn.addEventListener("click", () => {
+  // decrease by one
+  currentMonth--;
+  // checking if it's less than 0 set it to 11 and decrease year
+  if (currentMonth < 0) {
+    currentMonth = 11;
+    currentYear--;
+  }
+  // render calendar
+  renderCalender();
+});
+
+// go to today
+todayBtn.addEventListener('click', () => {
+  // set the month and year to current
+  currentMonth = date.getMonth();
+  currentYear = date.getFullYear();
+  // render calendar
+  renderCalender();
+});
 
 nav.addEventListener('mouseover', hoverFadeInOut.bind(0.5))
 nav.addEventListener('mouseout', hoverFadeInOut.bind(1))
 menuBtn.addEventListener('click', toggleMenu);
+gridBtn.addEventListener('click', changeView.bind(gridBtn));
+listBtn.addEventListener('click', changeView.bind(listBtn));
+
 theYear.textContent = `${getDate().year}`;
 lastModify.textContent = `${getDate().date} - ${getDate().time}`
 
-
-const dayAfter2mrr = new Date(currentYear, currentMonth - 1, 5);
-// let theday = new Date(dayAfter2mrr);
-// console.log(theday);
-const now = Date.now();
-
-const compute = Math.abs(Math.trunc((dayAfter2mrr.getTime() - now) / (1000 * 60 * 60 * 24)));
-if (compute === 0) {
-  console.log(welcomeBack);
-} else {
-  console.log(Math.abs(Math.trunc(compute)));
-}
-// const checkDate = 
-
-console.log(dayAfter2mrr, now);
+renderCalender();
+feedbackMessage();
+getMembersData();
+theView();
