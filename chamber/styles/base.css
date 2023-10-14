@@ -870,7 +870,7 @@ iframe {
 }
 
 
-       /* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
 /* ---------------------- JOIN PAGE SECTION --------------- */
 /* ----------------------------------------------------- */
 
@@ -1040,58 +1040,20 @@ iframe {
 }
 
 
-        /* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
 /* ---------------------- DIRECTORY PAGE SECTION --------------- */
 /* ----------------------------------------------------- */
 
 .intro-section {
     text-align: center;
-}
-
-.search-section {
-    margin-block: 1em;
-    background-color: var(--primary-color);
-    color: var(--default-color);
-    padding-block: 1em;
     padding-inline: 1em;
-
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-    gap: 1rem;
-}
-
-.search-section label {
-    width: 100%;
-}
-
-.search-section input {
-    width: 70%;
-    height: 4rem;
-    padding-inline: 1rem;
-    border-radius: 5rem;
-    margin-inline-start: 1rem;
-}
-
-.search-section input:focus {
-    outline-color: lime;
-}
-
-.search-section button {
-    padding-block: .5em;
-    padding-inline: 1em;
-    border: none;
-    background: transparent;
-    background-color: var(--secondary-color);
-    border-radius: 5rem;
-    box-shadow: var(--box-shadow-all-4sides);
-}
-
-.search-section button:active {
-    background-color: var(--secondary-shade-2);
 }
 
 .views-button-section {
+    margin-block: 1em;
+    background-color: var(--primary-color);
+    padding-block: 1em;
+    padding-inline: 1em;
     display: flex;
     justify-content: center;
     gap: 2rem;
@@ -1100,8 +1062,10 @@ iframe {
 .views-button-section button {
     padding-block: .5em;
     padding-inline: 1em;
+    border: none;
+    border-radius: 5px;
     background: transparent;
-    box-shadow: var(--box-shadow-effect);
+    box-shadow: var(--box-shadow-all-4sides);
 }
 
 .views-button-section button:active {
@@ -1115,7 +1079,7 @@ iframe {
 }
 
 .views-button-section #list-view {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     color: var(--default-color);
 }
 
@@ -1129,7 +1093,7 @@ iframe {
 }
 
 .member-card {
-    /* width: 50%; */
+    width: 80%;
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -1139,13 +1103,14 @@ iframe {
     text-align: center;
     border-radius: 1rem;
     box-shadow: var(--box-shadow-all-4sides-cleaner);
+    margin: 0 auto;
 }
 
 .member-card figure div {
     width: 60%;
 }
 
-.member-card figure img{
+.member-card figure img {
     width: 100%;
     height: auto;
 }
@@ -1157,7 +1122,7 @@ iframe {
 
 .member-card figure figcaption {
     font-family: var(--heading-font);
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 600;
 }
 
@@ -1166,10 +1131,10 @@ iframe {
     gap: 1rem;
 }
 
-.member-card .member-info-box a ,
+/* .member-card .member-info-box a,
 .member-card .member-info-box img {
     display: block;
-}
+} */
 
 .member-card .member-info-box a {
     color: var(--optional-color);
@@ -1180,11 +1145,11 @@ iframe {
     color: var(--primary-color);
 }
 
-/* .grid {
+.grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2.5rem;
-} */
+}
 
 .list {
     padding: 0;
@@ -1194,10 +1159,11 @@ iframe {
     background-color: var(--tertiary-color);
 }
 
-.list .member-card{
+.list .member-card {
     text-align: left;
     border-radius: 0;
     box-shadow: none;
+    width: 100%;
 }
 
 .list .member-card figure div {
@@ -1362,5 +1328,35 @@ iframe {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+
+    /* ----------------DIRECTORY PAGE SECTION --------------- */
+
+    .member-card {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        justify-content: center;
+    }
+
+
+    .list .member-card {
+        text-align: left;
+        border-radius: 0;
+        box-shadow: none;
+
+        flex-direction: row;
+        align-items: center;
+        gap: 2em;
+    }
+
+    .list .member-card figure div {
+        display: none;
+    }
+
+    .list .member-card .member-info-box {
+        display: flex;
+        align-items: center;
+        gap: 1em;
     }
 }
