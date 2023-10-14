@@ -11,7 +11,7 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         place-items: center;
-        
+
     }
 
     .homepage-body header {
@@ -205,8 +205,8 @@
     }
 
     /* ----------------------------------------------------- */
-/* ---------------------- DISCOVER PAGE SECTION --------------- */
-/* ----------------------------------------------------- */
+    /* ---------------------- DISCOVER PAGE SECTION --------------- */
+    /* ----------------------------------------------------- */
     .discover-page-body header,
     .join-page-body header,
     .directory-page-body header {
@@ -218,7 +218,7 @@
     .thankyou-page-body nav,
     .directory-page-body nav {
         grid-column: 3 / 5;
-        justify-self:self-end;
+        justify-self: self-end;
         align-self: center;
     }
 
@@ -232,7 +232,7 @@
         grid-column: 1 / 3;
         grid-row: 1 / 3;
         height: min-content;
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
         justify-items: center;
         padding-block: 3em;
     }
@@ -244,12 +244,12 @@
 
     .explore-photos-box {
         grid-column: 3 / 6;
-        grid-row: 2 / 3 
+        grid-row: 2 / 3
     }
 
     .explore-photos-box picture {
         width: 70%;
-        
+
     }
 
     .explore-photos-box picture img {
@@ -258,7 +258,7 @@
 
     .explore-photos-box picture img:hover {
         box-shadow: 0 0 0,
-        0 1rem 2rem -.5rem var(--primary-color);
+            0 1rem 2rem -.5rem var(--primary-color);
         border-radius: 1.5rem 15rem;
     }
 
@@ -287,12 +287,13 @@
     }
 
 
-        /* ----------------------------------------------------- */
-/* ---------------------- JOIN PAGE SECTION --------------- */
-/* ----------------------------------------------------- */
+    /* ----------------------------------------------------- */
+    /* ---------------------- JOIN PAGE SECTION --------------- */
+    /* ----------------------------------------------------- */
     .form-container {
         justify-content: space-evenly;
     }
+
     .form-container .svg-box {
         width: 35%;
     }
@@ -321,10 +322,17 @@
 }
 
 
-        /* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
 /* ---------------------- DIRECTORY PAGE SECTION --------------- */
 /* ----------------------------------------------------- */
 
+.list .member-card {
+    gap: 3rem;
+}
+
+.list .member-card .member-info-box {
+    gap: 2rem;
+}
 
 @media only screen and (min-width: 118.75em) {
 
