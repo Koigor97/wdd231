@@ -9,8 +9,6 @@ const daysContainer = document.querySelector(".days");
 const nextMonthBtn = document.querySelector(".next-btn");
 const prevMonthBtn = document.querySelector(".prev-btn");
 const month = document.querySelector(".the-date");
-messageBox.innerHTML = `Testing`;
-month.innerHTML = `Testing`;
 const todayBtn = document.querySelector('.today');
 const memberCardBox = document.querySelector('.member-card-section');
 const gridBtn = document.getElementById('grid-view');
@@ -76,6 +74,48 @@ window.addEventListener('load', function () {
   );
 });
 
+const toggleMenu = function () {
+  nav.classList.toggle('show-nav')
+}
+
+const hoverFadeInOut = function (e) {
+  if (e.target.classList.contains('nav-links')) {
+    const theNav = e.target;
+    const linksList = theNav.closest('.nav-list').querySelectorAll('.nav-links');
+
+    linksList.forEach(theLink => {
+      if (theLink !== theNav) {
+        theLink.style.opacity = this;
+
+      }
+    });
+  }
+}
+
+
+nav.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (e.target.classList.contains('nav-links')) {
+    const links = e.target
+      .closest(".nav-list")
+      .querySelectorAll(".nav-links");
+
+    const theLink = e.target;
+    links.forEach((e) => {
+      e.classList.remove("active");
+    });
+
+    if (theLink.tagName.toLowerCase() !== "a") return;
+    theLink.classList.add("active");
+  }
+
+});
+
+nav.addEventListener('mouseover', hoverFadeInOut.bind(0.5))
+nav.addEventListener('mouseout', hoverFadeInOut.bind(1))
+menuBtn.addEventListener('click', toggleMenu);
+//////////////////////////////////////////////////////////
+
 const membersUrl = '../data/members.json';
 
 const getMembersData = async function() {
@@ -84,6 +124,7 @@ const getMembersData = async function() {
   console.log(data);
   renderMembers(data.data);
 }
+getMembersData();
 
 const renderMembers = function(members) {
   members.forEach((member) => {
@@ -132,8 +173,11 @@ const theView  = function() {
   }
 }
 
+theView();
+gridBtn.addEventListener('click', changeView.bind(gridBtn));
+listBtn.addEventListener('click', changeView.bind(listBtn));
 
-
+////////////////////////////////////////////////////////////
 const getDate = function () {
   const date = new Date();
   const option = {
@@ -150,73 +194,34 @@ const getDate = function () {
 
   return dateNYear;
 };
+theYear.textContent = `${getDate().year}`;
+lastModify.textContent = `${getDate().date} - ${getDate().time}`
 
-const toggleMenu = function () {
-  nav.classList.toggle('show-nav')
-}
+// /////////////////////////////////////////////////////////
 
-const hoverFadeInOut = function (e) {
-  if (e.target.classList.contains('nav-links')) {
-    const theNav = e.target;
-    const linksList = theNav.closest('.nav-list').querySelectorAll('.nav-links');
 
-    linksList.forEach(theLink => {
-      if (theLink !== theNav) {
-        theLink.style.opacity = this;
-
-      }
-    });
-  }
-}
-
-nav.addEventListener("click", (e) => {
-  e.preventDefault();
-  if (e.target.classList.contains('nav-links')) {
-    const links = e.target
-      .closest(".nav-list")
-      .querySelectorAll(".nav-links");
-
-    const theLink = e.target;
-    links.forEach((e) => {
-      e.classList.remove("active");
-    });
-
-    if (theLink.tagName.toLowerCase() !== "a") return;
-    theLink.classList.add("active");
-  }
-
-});
 
 //  getting current date
 const date = new Date();
 // getting the current month
 let currentMonth = date.getMonth();
 // getting the current year
-let currentYear = date.getFullYear();
-console.log(date, currentMonth, currentYear);
+let currentYear = date.getFullYear()
 
 // function for rendering the days
-function renderCalender() {
+const renderCalender = function() {
   // getting the previous, current and next month days
   date.setDate(1);
   const firstDay = new Date(currentYear, currentMonth, 1);
-  console.log(firstDay);
   const lastDay = new Date(currentYear, currentMonth + 1, 0);
-  console.log(lastDay);
   const lastDayIndex = lastDay.getDay();
-  console.log(lastDayIndex);
   const lastDayDate = lastDay.getDate();
-  console.log(lastDayDate);
   const prevLastDay = new Date(currentYear, currentMonth, 0);
-  console.log(prevLastDay);
   const prevLastDayDate = prevLastDay.getDate();
-  console.log(prevLastDayDate);
   const nextDays = (7 - lastDayIndex) - 1;
-  console.log(nextDays);
 
   // updating the current year and month in header
   month.innerHTML = `${months[currentMonth]} ${currentYear}`;
-  console.log(`${months[currentMonth]} ${currentYear}`);
   // updating the days 
   let days = '';
 
@@ -286,6 +291,8 @@ function feedbackMessage() {
   localStorage.setItem('visitTimeStamp', JSON.stringify(currentTime))
 }
 
+
+
 nextMonthBtn.addEventListener('click', () => {
   // increase the current month by one
   currentMonth++
@@ -319,16 +326,11 @@ todayBtn.addEventListener('click', () => {
   renderCalender();
 });
 
-nav.addEventListener('mouseover', hoverFadeInOut.bind(0.5))
-nav.addEventListener('mouseout', hoverFadeInOut.bind(1))
-menuBtn.addEventListener('click', toggleMenu);
-gridBtn.addEventListener('click', changeView.bind(gridBtn));
-listBtn.addEventListener('click', changeView.bind(listBtn));
-
-theYear.textContent = `${getDate().year}`;
-lastModify.textContent = `${getDate().date} - ${getDate().time}`
-
-renderCalender();
 feedbackMessage();
-getMembersData();
-theView();
+renderCalender();
+
+
+
+
+
+
