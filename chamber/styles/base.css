@@ -1163,7 +1163,7 @@ iframe {
     text-align: left;
     border-radius: 0;
     box-shadow: none;
-    width: 100%;
+
 }
 
 .list .member-card figure div {
@@ -1323,7 +1323,7 @@ iframe {
     }
 
     .form-box form .benefits-box div {
-        height: 80%;
+        height: 70%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1334,7 +1334,7 @@ iframe {
 
     .member-card {
         height: 100%;
-        width: 100%;
+        width: 80%;
         margin: 0;
         justify-content: center;
     }

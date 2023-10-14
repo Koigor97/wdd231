@@ -86,7 +86,6 @@ const hoverFadeInOut = function (e) {
     linksList.forEach(theLink => {
       if (theLink !== theNav) {
         theLink.style.opacity = this;
-
       }
     });
   }
@@ -121,7 +120,6 @@ const membersUrl = '../data/members.json';
 const getMembersData = async function() {
   const response = await fetch(membersUrl);
   const data = await response.json();
-  console.log(data);
   renderMembers(data.data);
 }
 getMembersData();
@@ -161,7 +159,6 @@ const changeView = function() {
     memberCardBox.classList.remove('grid');
   }
   memberCardBox.classList.add(btn.id.slice(0, 4))
-  console.log(btn.id);
   saveView(btn.id.slice(0, 4));
 }
 
@@ -277,7 +274,6 @@ function feedbackMessage() {
     // calculating the days past since the last visit 
 
     const daysPast = Math.abs(Math.trunc((currentTime - lastVisit) / millisecToDay));
-    console.log(daysPast);
     // give user feedback based on the days past
    if (daysPast === 0) {
       messageBox.innerHTML = welcomeBack;
