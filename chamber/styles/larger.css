@@ -38,10 +38,6 @@
         align-self: self-end;
     }
 
-    /* nav ul {
-        gap: 1.7rem;
-    } */
-
     :where(nav ul, .nav-links, .social-links, .socials-box, .cta-box, [role="switch"]) {
         display: flex;
         justify-content: center;
