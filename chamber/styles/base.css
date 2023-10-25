@@ -119,6 +119,37 @@ svg {
 /* ----------------------------------------------------- */
 /* ---------------------- HOME PAGE SECTION --------------- */
 /* ----------------------------------------------------- */
+/* Meet up Alert banner */
+.banner {
+  display: flex;
+  background-color: var(--secondary-color);
+  color: #333;
+  padding: 10px;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  display: none;
+}
+
+.banner p {
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 2.4rem;
+    font-family: var(--heading-font);
+}
+
+.close-button {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: .5rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding-inline: .30em;
+  cursor: pointer;
+  line-height: normal;
+}
+
 
 .homepage-body h2 {
     font-family: var(--heading-font);
@@ -336,7 +367,8 @@ svg {
 .header-intro,
 .socials-box,
 .weather-box,
-.events-box {
+.events-box,
+.spotlight {
     border-radius: .5rem;
 }
 
@@ -441,7 +473,8 @@ svg {
 }
 
 .events-box,
-.weather-box {
+.weather-box,
+.spotlight {
     background-color: var(--primary-color);
     padding-inline: 1em;
     display: grid;
@@ -456,7 +489,8 @@ svg {
 }
 
 .events-box h2,
-.weather-box h2 {
+.weather-box h2,
+.spotlight h2 {
     color: var(--default-color);
     text-decoration-color: var(--default-color);
     align-self: center;
@@ -526,7 +560,6 @@ svg {
     place-items: center;
     row-gap: 5rem;
     padding-block: 2em 5em;
-    /* padding-inline: 1em; */
 }
 
 
@@ -1130,11 +1163,6 @@ iframe {
     display: grid;
     gap: 1rem;
 }
-
-/* .member-card .member-info-box a,
-.member-card .member-info-box img {
-    display: block;
-} */
 
 .member-card .member-info-box a {
     color: var(--optional-color);
