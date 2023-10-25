@@ -11,7 +11,6 @@ let currentMonth = date.getMonth();
 let currentYear = date.getFullYear()
 
 
-
 class Switch {
   constructor(switchMode) {
     this.switchBtn = switchMode;
@@ -34,12 +33,9 @@ class Switch {
     const currentState =
       this.switchBtn.getAttribute('aria-checked') === 'true';
     const switchDot = this.switchBtn.querySelector('.switch span');
-    // console.log(currentState);
     const newState = String(!currentState);
-    // console.log(newState);
 
     this.switchBtn.setAttribute('aria-checked', newState);
-    // switchDot.classList.toggle('dot');
     switchDot.classList.toggle('moveRight');
   }
 }
@@ -50,11 +46,9 @@ window.addEventListener('load', function () {
   Array.from(document.querySelectorAll('[role^=switch]')).forEach(
     (element) => {
       new Switch(element)
-      // console.log(element);
     }
   );
-
-  displayChamberMembers()
+  displayChamberMembers();
 });
 
 // Displaying Chamber members and there membership status
@@ -123,7 +117,6 @@ function displayChamberMembers() {
   gridBtn.addEventListener('click', changeView.bind(gridBtn));
   listBtn.addEventListener('click', changeView.bind(listBtn));
 }
-// displayChamberMembers();
 
 // //////////////////////////////////////////////
 function toggleNav() {
@@ -135,16 +128,15 @@ function toggleNav() {
 }
 toggleNav();
 
-
 // ///////////////////////////////////////////////
 // The active page functionality - highlight the current  active 
 // page
 function activePage() {
-  
+
   function setActiveLink() {
     const navLinks = document.querySelectorAll('.nav-links');
     const currentURL = window.location.href;
-    
+
     navLinks.forEach(link => {
       if (currentURL === link.href) {
         link.classList.add('active');
@@ -159,7 +151,7 @@ activePage();
 /////////////////// HOME PAGE SECTION ////////////////////
 //////////////////////////////////////////////////////////
 // The weather forecast functionality. Displaying the weather
-// forecast to the user -25.74433236181061, 28.234333823643258
+// forecast to the user 
 function weatherForecast() {
   const lat = -25.74433236181061;
   const long = 28.234333823643258;
@@ -180,7 +172,6 @@ function weatherForecast() {
       const response1 = await fetch(weatherUrl);
       if (response1.ok) {
         const weatherData = await response1.json();
-        // console.log(weatherData);
         displayResults(weatherData)
       } else {
         throw Error(await response1.text());
@@ -203,6 +194,7 @@ function weatherForecast() {
   apiFetch();
 }
 weatherForecast();
+
 // ////////////////////////////////////////////////////////////
 function displayDate() {
   const theYear = document.querySelector('#year');
@@ -377,15 +369,62 @@ function displayCalender() {
 }
 displayCalender();
 
-////////////////////// DIRECTORY PAGE SECTION /////////////////////
-///////////////////////////////////////////////////////////////
-
 ///////////////////////////////////////////////////////////
 // Spotlight box section - for homepage
+// Function to display spotlight members
+async function displaySpotlightMembers() {
+  const membersUrl = '../data/members.json';
+  const response = await fetch(membersUrl);
+  const data1 = await response.json();
+  // Filter data to include only gold or silver members
+  const goldSilverMembers = data1.data.filter(member => member.membershipLevel === "images/gold.png" || member.membershipLevel === "images/silver.png");
+  console.log(goldSilverMembers);
 
-// function displaySpotlight() {
+  // Shuffle the data array to randomize the order
+  shuffleArray(goldSilverMembers);
 
-//   const spotlightData = function(data) {
-//     const 
-//   }
-// }
+  // Select the first two members
+  const spotlightMembers = data1.slice(0, 2);
+
+  // Get the spotlight elements in the HTML
+  const spotlight1 = document.querySelector('.spotlight-1');
+  const spotlight2 = document.querySelector('.spotlight-2');
+
+  // Function to render spotlight member HTML
+  function renderSpotlightMember(member) {
+    return `
+    <img src="${member.image}" alt="${member.name} Logo">
+    <a href="${member.website}" target="_blank">${member.name}</a>
+  `;
+  }
+  spotlight1.innerHTML = renderSpotlightMember(spotlightMembers[0]);
+  console.log(renderSpotlightMember(spotlightMembers[0]));
+  spotlight2.innerHTML = renderSpotlightMember(spotlightMembers[1]);
+
+  // Function to shuffle an array randomly
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+  }
+}
+displaySpotlightMembers();
+
+//////////////////////////////////////////////////////////
+// Meetup banner
+function meetupBanner() {
+  const date = new Date();
+
+  if (date.getDay() >= 1 && date.getDay() <= 3) {
+    const banner = document.getElementById('banner');
+    banner.style.display = 'flex';
+
+    const closeBanner = document.getElementById('closeBanner');
+    closeBanner.addEventListener('click', function () {
+      banner.style.display = 'none';
+      console.log(banner);
+    });
+  }
+}
+meetupBanner();
