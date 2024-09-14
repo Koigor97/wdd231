@@ -1,6 +1,6 @@
 <img src="images/css.webp" alt="Python orgramming language logo" width=70> <img src="images/html.webp" alt="Python orgramming language logo" width=70> <img src="images/javascript.webp" alt="Python orgramming language logo" width=70>
 
-# wdd230 - Web Frontend 1
+# wdd131 - Web Dynamic Fundamentals
 
 **wdd131 Web Dynamic Fundamentals ** This two-credit course builds on prior experience in Web Fundamentals and programming. Students will learn to create dynamic websites that use JavaScript to respond to events, update content, and create responsive user experiences. The course introduces responsive design using HTML, CSS, and JavaScript with attention to usability, accessibility, and best practices in web frontend development. 
 This is a block course, meaning, it's 14 weeks semester course, crunched to a 7 week semester course. The course is structured in this way: Per week ↓  
