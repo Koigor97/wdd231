@@ -11,7 +11,6 @@
   --section-bg: rgba(17, 31, 45, 0.5);
   --section-header: linear-gradient(147deg, #ffb99a 0%, #ffdbc5 100%);
   --bg-color: #fff0e0;
-  --bg-img: url(../images/leaf.WEBP);
 }
 
 *,
@@ -30,9 +29,6 @@ html {
 body {
   font-family: var(--font-family);
   font-size: var(--fluid-text-2);
-  background-image: var(--bg-img);
-  background-size: cover;
-  /* background-repeat: no-repeat; */
 }
 
 header,
@@ -49,17 +45,14 @@ header {
   justify-content: center;
   align-items: center;
   gap: 4rem;
-
 }
 
-header img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
+header h1 {
+  font-size: var(--fluid-text-3);
 }
 
-.img-box {
-  max-width: 25%;
+header span {
+  color: #ffb99a;
 }
 
 ul {
@@ -72,7 +65,6 @@ nav {
   position: relative;
   display: grid;
 }
-
 
 nav ul {
   text-align: center;
@@ -103,37 +95,14 @@ main {
   padding: 2rem;
 }
 
-.info-box {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 5rem;
-}
-
-figure {
-  position: relative;
-}
-
-figure,
-main h2 {
-  margin-block-end: 1em;
-}
-
-figure img {
+header img {
   width: 100%;
   height: auto;
+  border-radius: 5px;
 }
 
-figcaption {
-  position: absolute;
-  top: 20%;
-  left: 10%;
-  transform: translate(-10%, -10%);
-  color: #000;
-  background-color: var(--bg-color);
-  padding-inline: 2em;
-  padding-block: 2em;
-  font-weight: 600;
-  text-shadow: -1rem 2px 2rem;
+.img-box {
+  width: 30%;
 }
 
 main :where(h2, h3) {
@@ -145,7 +114,7 @@ main h2 {
   border-bottom: 3px solid var(--bg-color);
 }
 
-main h3 {
+main h3:not(.country h3) {
   background: var(--section-header);
   border-radius: 0.5rem;
   color: #000;
@@ -155,44 +124,73 @@ main :where(section, h3) {
   padding: 1.5rem 2rem;
 }
 
-main ul {
-  text-indent: 2rem;
-  margin-block: 1rem;
-
+.course-work-box {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
 }
 
-main a:link,
-main a:visited {
-  color: var(--header-bg);
-  display: inline-block;
-  margin-inline-end: 1.5px;
-}
-
-
-.card {
-  background-color: var(--section-bg);
-  backdrop-filter: blur(1.5rem);
-  border-radius: 1rem;
-  box-shadow: var(--box-shadow);
-  padding-block: 1em;
-  padding-inline: 1em;
-}
-
-.weather-sec {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+.country-info-box {
+  display: grid;
   gap: 1rem;
+}
+
+.country-info-box p {
+  color: #000;
+  text-align: center;
+}
+
+.course-work-list li {
+  color: #000;
+}
+
+.course-work-list {
+  background-color: #ffb99a;
+  border-radius: 0.5rem;
+}
+
+.country-img-box img {
+  width: 100%;
+  height: auto;
+}
+
+.certificate {
+  display: grid;
+  gap: 2rem;
+}
+
+.certificate h2 {
+  color: #000;
+}
+
+.buttons {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.completed {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.not-completed {
+  background-color: #d3d3d3;
+  color: black;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
 }
 
 footer {
   text-align: center;
-  padding: 1.5rem 1rem;
 }
 
 #menu {
   font-size: 1.5rem;
-  border: 1px solid rgba(0, 0, 0, .3);
+  border: 1px solid rgba(0, 0, 0, 0.3);
   padding: 3px 7px 6px;
   background-color: #eee;
   color: #000;
@@ -220,49 +218,3 @@ footer {
 
 /* ----------------------------------------------------------- */
 /* Light - dark mode button section */
-
-[role="switch"] {
-  display: inline-block;
-  padding-inline: 1rem;
-  padding-block: .5rem;
-  width: 100%;
-  background-color: brown;
-}
-
-[role="switch"] .switch {
-  display: flex;
-  align-items: center;
-  border: 2px solid #fff;
-  height: 2.5rem;
-  width: 4.5rem;
-  border-radius: 1.2rem;
-  padding-inline-start: 1px;
-  margin: 0 auto;
-}
-
-[role="switch"] .switch span {
-  display: inline-block;
-  border: 2px solid black;
-  border-radius: .8rem;
-  height: 1.7rem;
-  width: 1.7rem;
-  background: white;
-  transition: all .3s;
-}
-
-.moveRight {
-  background: var(--section-header);
-  transform: translateX(2rem);
-}
-
-[role="switch"]:focus span.switch {
-  background: var(--bg-color);
-}
-
-[role="switch"]:focus .switch span {
-  background: orange;
-}
-
-iframe {
-  width: 100%;
-}
