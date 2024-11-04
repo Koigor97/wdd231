@@ -403,7 +403,7 @@ async function displaySpotlightMembers() {
   // Function to render spotlight member HTML
   function renderSpotlightMember(member) {
     return `
-    <img src="${member.image}" alt="${member.name} Logo">
+    <img width="300" height="300" src="${member.image}" alt="${member.name} Logo">
     <a href="${member.website}" target="_blank">${member.name}</a>
   `;
   }
