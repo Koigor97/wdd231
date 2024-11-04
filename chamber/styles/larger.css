@@ -1,0 +1,366 @@
+@media only screen and (min-width: 56.25em) {
+    html {
+        font-size: 62.5%;
+    }
+
+    /* ----------------------------------------------------- */
+    /* ---------------------- HOMEPAGE PAGE SECTION --------------- */
+    /* ----------------------------------------------------- */
+
+    header {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        place-items: center;
+
+    }
+
+    .homepage-body header {
+        min-height: 100vh;
+        grid-template-rows: 60px 1fr;
+        gap: 3.0rem;
+        padding-inline: 2rem;
+        padding-block-end: 2rem;
+    }
+
+    h1 {
+        font-size: 4.5rem;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        grid-column: 3 / 5;
+        grid-row: 1 / 2;
+        justify-self: end;
+        align-self: self-end;
+    }
+
+    :where(nav ul, .nav-links, .social-links, .socials-box, .cta-box, [role="switch"]) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-links {
+        padding-inline: 1em;
+        padding-block: .5em;
+    }
+
+    .header-box {
+        width: 60%;
+        grid-row: 2 / 3;
+        grid-column: 1 / span 3;
+        justify-self: center;
+
+        gap: var(--default-gap);
+    }
+
+    .header-intro {
+        text-align: left;
+    }
+
+    .logo-box {
+        width: 15rem;
+        justify-self: left;
+        align-self: self-start;
+    }
+
+    .logo-box img {
+        padding: 1.5rem 0;
+    }
+
+    .cta-box {
+        gap: var(--default-gap);
+        justify-self: left;
+    }
+
+    .btn-join,
+    .btn-explore {
+        padding: 0.25em 0.75em;
+        min-width: 10ch;
+        min-height: 4.4rem;
+    }
+
+    .btn-explore:hover,
+    .btn-join:hover {
+        transform: scale(1.1);
+    }
+
+    .btn-explore:active,
+    .btn-join:active {
+        transform: scale(1);
+    }
+
+    .figure-box {
+        transition: all .2s;
+        /* gap: 2rem; */
+    }
+
+    .figure-box:hover {
+        transform: translateY(-10px);
+    }
+
+    .news-event-section {
+        padding-block: 10em;
+    }
+
+    .news-event-section-box {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5rem;
+        width: 90vw;
+    }
+
+    .news-box {
+        grid-column: 1 / 3;
+        grid-row: 1 / 4;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: min-content max-content max-content;
+        place-items: center;
+        gap: 2em;
+        padding-block-end: 3em;
+
+    }
+
+    .weather-box {
+        color: var(--default-color);
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+        text-align: center;
+    }
+
+    .partner-slide {
+        flex-direction: row;
+    }
+
+    .partner-slide img {
+        width: 20%;
+    }
+
+
+    .services-section {
+        display: grid;
+        place-items: center;
+        row-gap: 10rem;
+        padding-block: 5em 10em;
+    }
+
+    .service-card-box {
+        width: 60%;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--default-gap);
+    }
+
+    .card svg {
+        width: 5rem;
+        height: 5rem;
+        fill: var(--default-shade-2);
+    }
+
+    .card {
+        background-color: #fff;
+    }
+
+    .card:hover {
+        background-color: var(--secondary-color);
+    }
+
+    .card:hover svg {
+        fill: var(--primary-color);
+    }
+
+
+    .explore {
+        flex-direction: row;
+        gap: 0;
+    }
+
+    .mini-gallery-box {
+        width: 50%;
+    }
+
+    .explore-text-box {
+        width: 35%;
+    }
+
+    footer:not(.copyright-box) {
+        align-items: flex-start;
+        flex-direction: row;
+        flex-flow: wrap;
+        text-align: left;
+    }
+
+    .footer-social-links:hover svg {
+        fill: var(--default-color);
+    }
+
+    /* ----------------------------------------------------- */
+    /* ---------------------- DISCOVER PAGE SECTION --------------- */
+    /* ----------------------------------------------------- */
+    .discover-page-body header,
+    .join-page-body header,
+    .directory-page-body header {
+        padding-inline: 2rem;
+    }
+
+    .discover-page-body nav,
+    .join-page-body nav,
+    .thankyou-page-body nav,
+    .directory-page-body nav {
+        grid-column: 3 / 5;
+        justify-self: self-end;
+        align-self: center;
+    }
+
+    .info-section-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+
+    }
+
+    .sidebar-box {
+        grid-column: 1 / 3;
+        grid-row: 1 / 3;
+        height: min-content;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        padding-block: 3em;
+    }
+
+    .map-box {
+        grid-column: 3 / 6;
+        grid-row: 1 / 2;
+    }
+
+    .explore-photos-box {
+        grid-column: 3 / 6;
+        grid-row: 2 / 3
+    }
+
+    .explore-photos-box picture {
+        width: 70%;
+
+    }
+
+    .explore-photos-box picture img {
+        transition: all .2s;
+    }
+
+    .explore-photos-box picture img:hover {
+        box-shadow: 0 0 0,
+            0 1rem 2rem -.5rem var(--primary-color);
+        border-radius: 1.5rem 15rem;
+    }
+
+    .sidebar-info,
+    .calender {
+        width: 80%;
+    }
+
+    .calender .header .btns svg {
+        transition: all .2s;
+    }
+
+    .calender .header .btns svg:hover {
+        transform: scale(1.1);
+        fill: var(--primary-color);
+        stroke: none;
+    }
+
+    .days .day {
+        transition: all .2s;
+    }
+
+    .days .day:not(.prev):not(.next):hover {
+        transform: scale(1.05);
+        background-color: var(--secondary-color);
+    }
+
+
+    /* ----------------------------------------------------- */
+    /* ---------------------- JOIN PAGE SECTION --------------- */
+    /* ----------------------------------------------------- */
+    .form-container {
+        justify-content: space-evenly;
+    }
+
+    .form-container .svg-box {
+        width: 35%;
+    }
+
+    .form-container form input[type="submit"]:hover {
+        background-color: var(--default-color);
+        color: var(--primary-color);
+    }
+
+    .form-container form input[type="submit"]:active {
+        box-shadow: none;
+    }
+
+    .join-page-body .join-cta-text {
+        width: 70vw;
+        margin: 0 auto 3em;
+    }
+
+    .thankyou-page-body section p,
+    .thankyou-page-body section h1 {
+        width: 60vw;
+        max-width: 70vw;
+        margin: 1em auto;
+    }
+
+}
+
+
+/* ----------------------------------------------------- */
+/* ---------------------- DIRECTORY PAGE SECTION --------------- */
+/* ----------------------------------------------------- */
+
+.member-card {
+    width: 100%;
+}
+
+.list .member-card {
+    gap: 3rem;
+}
+
+.list .member-card .member-info-box {
+    gap: 2rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+}
+
+@media only screen and (min-width: 118.75em) {
+
+    .news-event-section-box,
+    .service-card-box,
+    .partners {
+        max-width: 50vw;
+        margin: 0 auto;
+
+    }
+
+    .header-box {
+        max-width: 118rem;
+    }
+
+    .mini-gallery-box,
+    .explore-text-box {
+        max-width: 50em;
+    }
+
+    .explore {
+        justify-content: center;
+        gap: 7em;
+    }
+}
