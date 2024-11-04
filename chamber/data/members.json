@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "name": "Acme Corporation",
+      "address": "123 Main Street, City, Country",
+      "phone": "+27 (11) 123-4567",
+      "website": "https://www.acmecorp.co.za",
+      "image": "images/acme-corporation.webp",
+      "membershipLevel": "images/gold.png"
+    },
+    {
+      "name": "Widgets Ltd.",
+      "address": "456 Elm Street, Town, Country",
+      "phone": "+27 (21) 234-5678",
+      "website": "https://www.widgets.co.za",
+      "image": "images/widgetsltd.webp",
+      "membershipLevel": "images/gold.png"
+    },
+    {
+      "name": "Global Ventures",
+      "address": "789 Oak Street, Village, Country",
+      "phone": "+27 (31) 345-6789",
+      "website": "https://www.globalventures.co.za",
+      "image": "images/global-ventures.webp",
+      "membershipLevel": "images/bronze.png"
+    },
+    {
+      "name": "Tech Innovators",
+      "address": "101 Pine Street, Hamlet, Country",
+      "phone": "+27 (41) 456-7890",
+      "website": "https://www.techinnovators.co.za",
+      "image": "images/tech-innovators.webp",
+      "membershipLevel": "images/silver.png"
+    },
+    {
+      "name": "Service Providers SA",
+      "address": "202 Cedar Street, Village, Country",
+      "phone": "+27 (51) 567-8901",
+      "website": "https://www.serviceproviders.co.za",
+      "image": "images/service-providers.webp",
+      "membershipLevel": "images/gold.png"
+    },
+    {
+      "name": "BlueWave Solutions",
+      "address": "303 Birch Street, Town, Country",
+      "phone": "+27 (61) 678-9012",
+      "website": "https://www.bluewavesolutions.co.za",
+      "image": "images/bluewave-solutions.webp",
+      "membershipLevel": "images/np.png"
+    },
+    {
+      "name": "Data Experts SA",
+      "address": "404 Maple Street, City, Country",
+      "phone": "+27 (71) 789-0123",
+      "website": "https://www.dataexperts.co.za",
+      "image": "images/data-experts-sa.webp",
+      "membershipLevel": "images/np.png"
+    },
+    {
+      "name": "Innovate Now",
+      "address": "505 Willow Street, Hamlet, Country",
+      "phone": "+27 (81) 890-1234",
+      "website": "https://www.innovatenow.co.za",
+      "image": "images/innovate-now.webp",
+      "membershipLevel": "images/silver.png"
+    },
+    {
+      "name": "GlobeConnect Solutions",
+      "address": "606 Cedar Street, Town, Country",
+      "phone": "+27 (91) 901-2345",
+      "website": "https://www.globeconnectsolutions.co.za",
+      "image": "images/globeconnect-solutions.webp",
+      "membershipLevel": "images/gold.png"
+    },
+    {
+      "name": "Smart Systems SA",
+      "address": "707 Pine Street, City, Country",
+      "phone": "+27 (10) 012-3456",
+      "website": "https://www.smartsystems.co.za",
+      "image": "images/smart-systems.webp",
+      "membershipLevel": "images/bronze.png"
+    }
+  ]
+}
