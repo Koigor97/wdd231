@@ -1,5 +1,40 @@
 "use strict";
 
+document.addEventListener("DOMContentLoaded", () => {
+  const spotlightContainer = document.querySelector(".spotlight");
+  if (spotlightContainer) {
+    fetch("./data/members.json")
+        .then(response => response.json())
+        .then(data => {
+          // Filter members with gold or silver membership levels
+          const eligibleMembers = data.data.filter(member =>
+              member.membershipLevel.includes("gold") || member.membershipLevel.includes("silver")
+          );
+
+          // Randomly select 2-3 members
+          const selectedMembers = [];
+          const numberOfMembers = Math.min(eligibleMembers.length, Math.floor(Math.random() * 2) + 2);
+          while (selectedMembers.length < numberOfMembers) {
+            const randomIndex = Math.floor(Math.random() * eligibleMembers.length);
+            selectedMembers.push(eligibleMembers.splice(randomIndex, 1)[0]);
+          }
+
+          // Render the members
+          selectedMembers.forEach(member => {
+            const memberDiv = document.createElement("div");
+            memberDiv.classList.add("member-card");
+            memberDiv.innerHTML = `
+              <img src="${member.image}" alt="${member.name} logo" width="100px" height="100px">
+              <p>${member.name}</p>
+          `;
+            spotlightContainer.appendChild(memberDiv);
+          });
+        })
+        .catch(error => console.error("Error loading members:", error));
+  }
+});
+
+
 const nav = document.querySelector(".header-nav");
 const menuBtn = document.querySelector(".menu-btn");
 
@@ -438,3 +473,4 @@ function meetupBanner() {
   }
 }
 meetupBanner();
+

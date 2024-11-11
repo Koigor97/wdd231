@@ -510,6 +510,31 @@ svg {
   box-shadow: 0 0 0.5rem 0.3rem var(--default-color);
 }
 
+/* -----------------------SPOTLIGHT SECTION ------------------- */
+.spotlight {
+  padding-block: 1rem;
+}
+
+.member-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  background-color: var(--bg-color);
+}
+
+.member-card img {
+  max-width: 50px;
+  height: auto;
+}
+
+.member-info-box {
+  flex-grow: 1;
+}
+
+
 /* ---------------------PARTNERS SECTION ------------------- */
 .partners {
   /* overflow: hidden; */
