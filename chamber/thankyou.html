@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Lynnwood Chamber</title>
+    <meta name="author" content="Samuel Turay">
+    <meta
+      name="description"
+      content="Join the Lynnwood Community Chamber of Commerce. Joining the Lynnwood Chamber of Commerce opens you to a world of possibilities, from Business ventures, Investments, Innovations, etc."
+    />
+    <meta property="og:title" content="Lynnwood Business Chamber ">
+    <meta property="og:type" content="website">
+    <meta
+      property="og:url"
+      content="https://koigor97.github.io/wdd230/chamber/discover.html"
+>
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/Koigor97/wdd230/main/chamber/images/hero.WEBP"
+>
+    <meta property="og:site_name" content="Lynnwood Business Chamber">
+    <meta
+      property="og:description"
+      content="Join the Lynnwood Community Chamber of Commerce. Joining the Lynnwood Chamber of Commerce opens you to a world of possibilities, from Business ventures, Investments, Innovations, etc."
+>
+    <link
+      type="icon"
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="apple-touch-icon.png"
+>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@400;700&family=Poppins&display=swap"
+      rel="stylesheet"
+>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+  </head>
+
+  <body class="thankyou-page-body">
+    <header>
+      <button class="menu-btn" aria-label="Toggle menu button">
+        <svg>
+          <use xlink:href="images/sprite.svg#icon-icon-menu"></use>
+        </svg>
+      </button>
+
+      <div class="logo-box">
+        <a href="index.html">
+          <img
+            src="images/chamber-logo.png"
+            alt="Lynnwood Business Chamber logo"
+            class="logo"
+            width="323"
+            height="130"
+          />
+        </a>
+      </div>
+
+      <nav class="header-nav">
+        <ul class="nav-list">
+          <li>
+            <a href="index.html" class="nav-links">
+              <svg>
+                <use xlink:href="images/sprite.svg#icon-home"></use>
+              </svg>
+              HOME
+            </a>
+          </li>
+
+          <a href="directory.html" class="nav-links">
+            <svg>
+              <use xlink:href="images/sprite.svg#icon-folder"></use>
+            </svg>
+            DIRECTORY
+          </a>
+          </li>
+          <li>
+            <a href="join.html" class="nav-links">
+              <svg>
+                <use xlink:href="images/sprite.svg#icon-add-user"></use>
+              </svg>
+              JOIN
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="thankyou-section">
+        <h1>
+          Congratulations! You're now an official member of the Lynnwood Chamber
+          of Commerce. 🎉
+        </h1>
+        <p>
+          You've taken a significant step toward unlocking new opportunities,
+          networking with industry leaders, and growing your business. We're
+          thrilled to have you on board! Thank you for choosing us as your
+          partner in success.
+        </p>
+
+        <div class="summary-box">
+          <h2>Your Submitted Details:</h2>
+          <ul>
+            <li><strong>First Name:</strong> <span id="fname"></span></li>
+            <li><strong>Last Name:</strong> <span id="lname"></span></li>
+            <li><strong>Email Address:</strong> <span id="email"></span></li>
+            <li><strong>Phone Number:</strong> <span id="phone"></span></li>
+            <li><strong>Organization Name:</strong> <span id="org-name"></span></li>
+            <li><strong>Membership Level:</strong> <span id="membership"></span></li>
+            <li><strong>Date Submitted:</strong> <span id="timestamp"></span></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    
+
+    <script src="scripts/thankyou.js"></script>
+  </body>
+</html>
