@@ -4,36 +4,73 @@ document.addEventListener("DOMContentLoaded", () => {
   const spotlightContainer = document.querySelector(".spotlight");
   if (spotlightContainer) {
     fetch("./data/members.json")
-        .then(response => response.json())
-        .then(data => {
-          // Filter members with gold or silver membership levels
-          const eligibleMembers = data.data.filter(member =>
-              member.membershipLevel.includes("gold") || member.membershipLevel.includes("silver")
+      .then((response) => response.json())
+      .then((data) => {
+        // Filter members with gold or silver membership levels
+        const eligibleMembers = data.data.filter(
+          (member) =>
+            member.membershipLevel.includes("gold") ||
+            member.membershipLevel.includes("silver")
+        );
+
+        // Randomly select 2-3 members
+        const selectedMembers = [];
+        const numberOfMembers = Math.min(
+          eligibleMembers.length,
+          Math.floor(Math.random() * 2) + 2
+        );
+        while (selectedMembers.length < numberOfMembers) {
+          const randomIndex = Math.floor(
+            Math.random() * eligibleMembers.length
           );
+          selectedMembers.push(eligibleMembers.splice(randomIndex, 1)[0]);
+        }
 
-          // Randomly select 2-3 members
-          const selectedMembers = [];
-          const numberOfMembers = Math.min(eligibleMembers.length, Math.floor(Math.random() * 2) + 2);
-          while (selectedMembers.length < numberOfMembers) {
-            const randomIndex = Math.floor(Math.random() * eligibleMembers.length);
-            selectedMembers.push(eligibleMembers.splice(randomIndex, 1)[0]);
-          }
-
-          // Render the members
-          selectedMembers.forEach(member => {
-            const memberDiv = document.createElement("div");
-            memberDiv.classList.add("member-card");
-            memberDiv.innerHTML = `
+        // Render the members
+        selectedMembers.forEach((member) => {
+          const memberDiv = document.createElement("div");
+          memberDiv.classList.add("member-card");
+          memberDiv.innerHTML = `
               <img src="${member.image}" alt="${member.name} logo" width="100px" height="100px">
               <p>${member.name}</p>
           `;
-            spotlightContainer.appendChild(memberDiv);
-          });
-        })
-        .catch(error => console.error("Error loading members:", error));
+          spotlightContainer.appendChild(memberDiv);
+        });
+      })
+      .catch((error) => console.error("Error loading members:", error));
   }
-});
 
+  // Get all "Learn More" buttons
+  const openButtons = document.querySelectorAll(".modal-open");
+  const closeButtons = document.querySelectorAll(".modal-close");
+  const modals = document.querySelectorAll(".modal");
+
+  // Function to open a modal
+  openButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const modalId = button.getAttribute("data-modal");
+      const modal = document.getElementById(modalId);
+      if (modal) modal.style.display = "flex";
+    });
+  });
+
+  // Function to close a modal
+  closeButtons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      const modal = e.target.closest(".modal");
+      if (modal) modal.style.display = "none";
+    });
+  });
+
+  // Close modal when clicking outside content
+  modals.forEach((modal) => {
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  });
+});
 
 const nav = document.querySelector(".header-nav");
 const menuBtn = document.querySelector(".menu-btn");
@@ -473,4 +510,3 @@ function meetupBanner() {
   }
 }
 meetupBanner();
-
