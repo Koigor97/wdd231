@@ -13,6 +13,18 @@
     place-items: center;
   }
 
+  /* .directory-page-body header,
+  .join-page-body header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  } */
+
+  .directory-page-body header nav,
+  .join-page-body header nav {
+    align-self: center;
+  }
+
   .homepage-body header {
     min-height: 100vh;
     grid-template-rows: 60px 1fr;
@@ -202,28 +214,66 @@
   .footer-social-links:hover svg {
     fill: var(--default-color);
   }
-}
 
-/* ----------------------------------------------------- */
-/* ---------------------- DIRECTORY PAGE SECTION --------------- */
-/* ----------------------------------------------------- */
+  /* ----------------------------------------------------- */
+  /* ---------------------- DIRECTORY PAGE SECTION --------------- */
+  /* ----------------------------------------------------- */
 
-.member-card {
-  width: 100%;
-}
+  .member-card {
+    width: 100%;
+  }
 
-.list .member-card {
-  gap: 3rem;
-}
+  .list .member-card {
+    gap: 3rem;
+  }
 
-.list .member-card .member-info-box {
-  gap: 2rem;
-}
+  .list .member-card .member-info-box {
+    gap: 2rem;
+  }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2.5rem;
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+  }
+
+  /* ----------------------------------------------------- */
+  /* ---------------------- JOIN PAGE SECTION --------------- */
+  /* ----------------------------------------------------- */
+  .form-container {
+    justify-content: space-evenly;
+  }
+
+  .form-container .svg-box {
+    width: 35%;
+  }
+
+  .form-container form input[type="submit"]:hover {
+    background-color: var(--default-color);
+    color: var(--primary-color);
+  }
+
+  .form-container form input[type="submit"]:active {
+    box-shadow: none;
+  }
+
+  .join-page-body .join-cta-text {
+    width: 70vw;
+    margin: 0 auto 3em;
+  }
+
+  .thankyou-page-body section p,
+  .thankyou-page-body section h1,
+  .summary-box {
+    width: 60vw;
+    max-width: 70vw;
+    margin: 1em auto;
+  }
+
+  .membership-card {
+    display: grid;
+    gap: 2rem;
+  }
 }
 
 @media only screen and (min-width: 118.75em) {
