@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lynnwood Chamber of Commerce Discover </title>
+    <meta name="author" content="Samuel Turay">
+    <meta name="description"
+        content="The Lynnwood Community Discover page open you to the beautiful community of Lynnwood. It highlists all the landmarks, recreational parks, etc.">
+    <meta property="og:title" content="Lynnwood Business Chamber ">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://koigor97.github.io/wdd231/chamber/discover.html">
+    <meta property="og:image" content="https://github.com/Koigor97/wdd231/blob/main/chamber/images/hero.WEBP">
+    <meta property="og:site_name" content="Lynnwood Business Chamber">
+    <meta property="og:description"
+        content="Discover Lynnwood Community. The Discover page open you up to the beautiful community of Lynnwood. It highlists all the landmarks, recreational parks, etc.">
+    <link type="icon" rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@400;700&family=Poppins&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+</head>
+
+<body class="discover-page-body">
+    <header>
+        <button class="menu-btn" aria-label="Toggle menu button">
+            <svg>
+                <use xlink:href="images/sprite.svg#icon-icon-menu"></use>
+            </svg>
+        </button>
+
+        <div class="logo-box">
+            <a href="index.html"><img src="images/chamber-logo.png" alt="Lynnwood Business Chamber logo" class="logo"
+                    width="323" height="130">
+            </a>
+        </div>
+
+        <nav class="header-nav">
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-links"><svg>
+                            <use xlink:href="images/sprite.svg#icon-home"></use>
+                        </svg> HOME</a></li>
+                <li><a href="discover.html" class="nav-links"><svg>
+                            <use xlink:href="images/sprite.svg#icon-magnifying-glass"></use>
+                        </svg> DISCOVER</a></li>
+                <li><a href="directory.html" class="nav-links"><svg>
+                            <use xlink:href="images/sprite.svg#icon-folder"></use>
+                        </svg> DIRECTORY</a></li>
+                <li><a href="join.html" class="nav-links"><svg>
+                            <use xlink:href="images/sprite.svg#icon-add-user"></use>
+                        </svg> JOIN</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="banner-section">
+            <div class="banner-image-box">
+                <picture>
+                    <source media="(max-width: 900px)" srcset="images/beach-front-small.webp">
+                    <img src="images/beach-front-large.webp" alt="Photo of Houses on a beach-front" width="1000"
+                        height="500" loading="lazy">
+                </picture>
+                <picture>
+                    <source media="(max-width: 900px)" srcset="images/theme-park-small.webp">
+                    <img src="images/theme-park-large.webp" alt="Photo of spinnign Ferris wheel at night" width="1000"
+                        height="500" loading="lazy">
+                </picture>
+                <picture>
+                    <source media="(max-width: 900px)" srcset="images/coastline-small.webp">
+                    <img src="images/coastline-large.webp" alt="Photo of a coastline" width="1000" height="500"
+                        loading="lazy">
+                </picture>
+            </div>
+        </section>
+
+        <section class="info-section-grid">
+            <div class="sidebar-box">
+                <div class="message-box sidebar-info">
+                </div>
+                <div class="population-info sidebar-info">
+                    <div>
+                        <img src="images/bar-chart.webp" alt="image of a colorful bar-chart" width="288" height="250"
+                            loading="lazy">
+                    </div>
+                    <ul>
+                        <li><strong>Population: </strong>250,000</li>
+                        <li><strong>Demographic: </strong>45% Male, 55% Female</li>
+                        <li><strong>Education: </strong>10 Schools, 1 University</li>
+                        <li><strong>Diversity: </strong>Africans, Asians, Indians</li>
+                    </ul>
+                </div>
+                <div class="blog-post sidebar-info">
+                    <div class="heading-intro">
+                        <h2>Lynn Blog</h2>
+                        <svg>
+                            <use xlink:href="images/sprite.svg#icon-open-book"></use>
+                        </svg>
+                    </div>
+                    <p>
+                        Explore strategies for local business success in a dynamic market. Unlock growth opportunities
+                        and build strong customer relationships. <a href="#">learn more</a>
+                    </p>
+
+                </div>
+                <div class="karaoke-post sidebar-info">
+                    <div class="heading-intro">
+                        <h2>Karaoke Week</h2>
+                        <svg>
+                            <use xlink:href="images/sprite.svg#icon-modern-mic"></use>
+                        </svg>
+                    </div>
+                    <p>
+                        Celebrate Karaoke Week. Sing your favorite tunes, showcase your talent, and enjoy a week filled
+                        with music, laughter, and memorable performances. <a href="#">learn more</a>
+                    </p>
+
+                </div>
+
+                <div class="calender">
+                    <div class="header">
+                        <div class="the-date"></div>
+                        <div class="btns">
+                            <svg class="today">
+                                <use xlink:href="images/sprite.svg#icon-new-message"></use>
+                            </svg>
+                            <svg class="prev-btn">
+                                <use xlink:href="images/sprite.svg#icon-chevron-with-circle-left"></use>
+                            </svg>
+                            <svg class="next-btn">
+                                <use xlink:href="images/sprite.svg#icon-chevron-with-circle-right"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="weekdays">
+                        <ul>
+                            <li class="day">Sun</li>
+                            <li class="day">Mon</li>
+                            <li class="day">Tue</li>
+                            <li class="day">Wed</li>
+                            <li class="day">Thu</li>
+                            <li class="day">Fri</li>
+                            <li class="day">Sat</li>
+                        </ul>
+                    </div>
+                    <div class="days">
+                    
+                    </div>
+                </div>
+            </div>
+            <div class="map-box">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14370.874205228938!2d28.33450565!3d-25.779858299999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sza!4v1695939165652!5m2!1sen!2sza"
+                    width="1000" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="explore-photos-box">
+                <div class="about-lynnwood-box">
+                    <h3>About Lynnwood</h3>
+                    <p>
+                        Lynnwood, a city nestled in the heart of the Pretoria East, embodies the essence of a vibrant
+                        and thriving community. Located an hour north of Seattle, Lynnwood boasts a rich tapestry of
+                        culture, business, and natural beauty. With the total population of 250,000, and a steady growth
+                        of 3% annually over the past five years. Lynnwood offers three major hospitals and numerous
+                        clinics provide excellent healthcare services, 15 parks, 5 hiking trails, and a beautiful
+                        waterfront for outdoor enthusiasts, low crime rate and family-friendly environment contribute to
+                        a high quality of life, active volunteer community with opportunities in education,
+                        environmental conservation, and social services.
+                    </p>
+                </div>
+                <picture>
+                    <source media="(max-width: 600px)" srcset="images/carnival-small.webp">
+                    <source media="(max-width: 900px)" srcset="images/carnival-medium.webp">
+                    <img src="images/carnival-large.webp" alt="Photo of a person wearing a mask at a carnival"
+                        width="1500" height="750" loading="lazy">
+                </picture>
+                <picture>
+                    <source media="(max-width: 600px)" srcset="images/drone-view-small.webp">
+                    <source media="(max-width: 900px)" srcset="images/drone-view-medium.webp">
+                    <img src="images/drone-view-large.webp" alt="Drone shot of a city" width="1500" height="750"
+                        loading="lazy">
+                </picture>
+                <picture>
+                    <source media="(max-width: 600px)" srcset="images/restaurant-small.webp">
+                    <source media="(max-width: 900px)" srcset="images/restaurant-medium.webp">
+                    <img src="images/restaurant-large.webp" alt="A restaurant by a river" width="1500" height="750"
+                        loading="lazy">
+                </picture>
+                <picture>
+                    <source media="(max-width: 600px)" srcset="images/school-children-small.webp">
+                    <source media="(max-width: 900px)" srcset="images/school-children-medium.webp">
+                    <img src="images/school-children-large.webp" alt="Photo of litte school children dancing"
+                        width="1500" height="750" loading="lazy">
+                </picture>
+                <picture>
+                    <source media="(max-width: 600px)" srcset="images/stadium-small.webp">
+                    <source media="(max-width: 900px)" srcset="images/stadium-medium.webp">
+                    <img src="images/stadium-large.webp" alt="A football/soccer stadium at night" width="1500"
+                        height="750" loading="lazy">
+                </picture>
+                <picture>
+                    <source media="(max-width: 600px)" srcset="images/cablecar-small.webp">
+                    <source media="(max-width: 900px)" srcset="images/cablecar-medium.webp">
+                    <img src="images/cablecar-large.webp" alt="A cable car going up a mountain" width="1500"
+                        height="750" loading="lazy">
+                </picture>
+                <picture>
+                    <source media="(max-width: 600px)" srcset="images/market-place-small.webp">
+                    <source media="(max-width: 900px)" srcset="images/market-place-medium.webp">
+                    <img src="images/market-place-large.webp" alt="vegetables in a basket at the market" width="1500"
+                        height="750" loading="lazy">
+                </picture>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contact-box">
+            <p class="footer-captions">Contact Us</p>
+            <address>
+                <a href="mailto:tur22018@byui.edu">📧 lynnwoodchamber@outlook.com</a>
+                <!-- <br> -->
+                <a href="tel:+27824004469">📞 (082) 400-4469</a>
+                <p>📍 285 Lynnwood Boulevard</p>
+                <p>0081 - Guateng Province</p>
+                <p>Pretoria, South Africa</p>
+            </address>
+        </div>
+        <div class="quick-link-box">
+            <p class="footer-captions">Quick Links</p>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-socials">
+            <p class="footer-captions">Stay Connected</p>
+            <ul>
+                <li><a href="https://www.instagram.com/koigor101/" target="_blank" class="footer-social-links"
+                        aria-label="Go to Koigor's Instagram page">
+                        <svg>
+                            <use xlink:href="images/sprite.svg#icon-instagram-with-circle"></use>
+                        </svg>
+                    </a></li>
+                <li><a href="https://www.linkedin.com/in/samuel-turay1/" target="_blank" class="footer-social-links"
+                        aria-label="Go to Koigor's LinkedIn account">
+                        <svg>
+                            <use xlink:href="images/sprite.svg#icon-linkedin-with-circle"></use>
+                        </svg>
+                    </a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=100004979054375" target="_blank"
+                        class="footer-social-links" aria-label="Go to Koigor's Facebook page">
+                        <svg>
+                            <use xlink:href="images/sprite.svg#icon-facebook"></use>
+                        </svg>
+                    </a></li>
+                <li><a href="https://www.youtube.com/" target="_blank" class="footer-social-links"
+                        aria-label="Go to Youtube.com homepage">
+                        <svg>
+                            <use xlink:href="images/sprite.svg#icon-youtube-with-circle"></use>
+                        </svg>
+                    </a></li>
+            </ul>
+        </div>
+        <div class="copyright-box">
+            <p>&copy; <span id="year"></span> .:|:. Samuel Turay ✌🏾 - WDD230 .:|:. Freetown - Sierra Leone 🇸🇱</p>
+            <p>Last modified: <span class="last-modify"></span></p>
+            <p id="analytics"></p>
+        </div>
+    </footer>
+
+    <script src="scripts/index.js"></script>
+</body>
+
+</html>

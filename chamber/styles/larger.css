@@ -215,6 +215,88 @@
     fill: var(--default-color);
   }
 
+            /* ----------------------------------------------------- */
+            /* ---------------------- DISCOVER PAGE SECTION --------------- */
+            /* ----------------------------------------------------- */
+            .discover-page-body header,
+            .join-page-body header,
+            .directory-page-body header {
+              padding-inline: 2rem;
+            }
+      
+            .discover-page-body nav,
+            .join-page-body nav,
+            .thankyou-page-body nav,
+            .directory-page-body nav {
+              grid-column: 3 / 5;
+              justify-self: self-end;
+              align-self: center;
+            }
+      
+            .info-section-grid {
+              display: grid;
+              grid-template-columns: repeat(5, 1fr);
+      
+            }
+      
+            .sidebar-box {
+              grid-column: 1 / 3;
+              grid-row: 1 / 3;
+              height: min-content;
+              grid-template-columns: 1fr;
+              justify-items: center;
+              padding-block: 3em;
+            }
+      
+            .map-box {
+              grid-column: 3 / 6;
+              grid-row: 1 / 2;
+            }
+      
+            .explore-photos-box {
+              grid-column: 3 / 6;
+              grid-row: 2 / 3
+            }
+      
+            .explore-photos-box picture {
+              width: 70%;
+      
+            }
+      
+            .explore-photos-box picture img {
+              transition: all .2s;
+            }
+      
+            .explore-photos-box picture img:hover {
+              box-shadow: 0 0 0,
+                0 1rem 2rem -.5rem var(--primary-color);
+              border-radius: 1.5rem 15rem;
+            }
+      
+            .sidebar-info,
+            .calender {
+              width: 80%;
+            }
+      
+            .calender .header .btns svg {
+              transition: all .2s;
+            }
+      
+            .calender .header .btns svg:hover {
+              transform: scale(1.1);
+              fill: var(--primary-color);
+              stroke: none;
+            }
+      
+            .days .day {
+              transition: all .2s;
+            }
+      
+            .days .day:not(.prev):not(.next):hover {
+              transform: scale(1.05);
+              background-color: var(--secondary-color);
+            }
+
   /* ----------------------------------------------------- */
   /* ---------------------- DIRECTORY PAGE SECTION --------------- */
   /* ----------------------------------------------------- */

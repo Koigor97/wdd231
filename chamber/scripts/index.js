@@ -178,7 +178,6 @@ function displayChamberMembers() {
 
   const theView = function () {
     const isView = JSON.parse(localStorage.getItem("localView"));
-    console.log(isView);
     if (isView && isView != 0) {
       memberCardBox.classList.add(isView);
     }
