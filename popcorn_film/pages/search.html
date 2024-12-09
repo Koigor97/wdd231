@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Search Results - Pop&Film" />
+    <meta
+      property="og:description"
+      content="Explore the latest movies and TV shows. Find what you're looking for with our powerful search functionality."
+    />
+    <meta
+      property="og:image"
+      content="https://github.com/Koigor97/popcorn_film/blob/main/images/screen.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://popcornfilm.netlify.app/pages.search.html"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:site_name"
+      content="Pop&Film - Your Ultimate Movie Destination"
+    />
+    <meta property="og:locale" content="en_US" />
+    <title>Search Results - Pop&Film</title>
+    <link rel="stylesheet" href="../lib/fontawesome.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/spinner.css" />
+    <script type="module" src="../scripts/main.js" defer></script>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container"></div>
+    </header>
+
+    <!-- Search Movies -->
+    <section class="search">
+      <div class="container">
+        <div id="alert"></div>
+        <form action="../pages/search.html" class="search-form">
+          <div class="search-radio">
+            <input type="radio" id="movie" name="type" value="movie" checked />
+            <label for="movies">Movies</label>
+            <input type="radio" id="tv" name="type" value="tv" />
+            <label for="shows">TV Shows</label>
+          </div>
+          <div class="search-flex">
+            <input
+              type="text"
+              name="search-term"
+              id="search-term"
+              placeholder="Enter search term"
+            />
+            <button class="btn" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Search Results -->
+    <section id="search-results-wrapper" class="container">
+      <heading id="search-results-heading"></heading>
+      <div id="search-results" class="grid"></div>
+      <div id="pagination"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+      <div class="container"></div>
+    </footer>
+
+    <div class="spinner"></div>
+  </body>
+</html>
