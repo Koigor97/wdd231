@@ -58,18 +58,18 @@ export const renderTemplateToView = (
  * @returns void
  */
 
-export const renderHeaderAndFooter = async () => {
-  const headerTemplate = await loadTemplate("/popcorn_film/partials/header.html");
-  const footerTemplate = await loadTemplate("/popcorn_film/partials/footer.html");
-  const navTemplate = await loadTemplate("/popcorn_film/partials/navigation.html");
+// export const renderHeaderAndFooter = async () => {
+//   const headerTemplate = await loadTemplate("/popcorn_film/partials/header.html");
+//   const footerTemplate = await loadTemplate("/popcorn_film/partials/footer.html");
+//   const navTemplate = await loadTemplate("/popcorn_film/partials/navigation.html");
 
-  const headerElement = document.querySelector(".main-header .container");
-  renderTemplateToView(navTemplate, headerElement);
-  const footerElement = document.querySelector(".main-footer");
+//   const headerElement = document.querySelector(".main-header .container");
+//   renderTemplateToView(navTemplate, headerElement);
+//   const footerElement = document.querySelector(".main-footer");
 
-  renderTemplateToView(headerTemplate, headerElement);
-  renderTemplateToView(footerTemplate, footerElement);
-};
+//   renderTemplateToView(headerTemplate, headerElement);
+//   renderTemplateToView(footerTemplate, footerElement);
+// };
 
 // Display 20 most popular movies
 async function displayPopularMovies() {
@@ -545,7 +545,7 @@ function addCommasToNumber(number) {
 
 // Init App
 export function init() {
-  renderHeaderAndFooter();
+  // renderHeaderAndFooter();
 
   switch (global.currentPage) {
     case "/popcorn_film/index.html":
