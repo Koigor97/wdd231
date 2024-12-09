@@ -548,8 +548,8 @@ export function init() {
   // renderHeaderAndFooter();
 
   switch (global.currentPage) {
-    case "/popcorn_film/index.html":
-    case "/popcorn_film/index.html":
+    case "../popcorn_film/index.html":
+    case "../popcorn_film/index.html":
       displaySlider();
       displayPopularMovies();
       break;
